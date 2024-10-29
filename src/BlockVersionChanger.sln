@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{d5f51cc2-faa2-474d-8acc-0f32d1b07004}") = "BlockVersionChanger", "BlockVersionChanger\BlockVersionChanger.csproj", "{0144a826-2147-4525-aef7-d0423286926a}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0144a826-2147-4525-aef7-d0423286926a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0144a826-2147-4525-aef7-d0423286926a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0144a826-2147-4525-aef7-d0423286926a}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0144a826-2147-4525-aef7-d0423286926a}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {de2c9df6-fcca-45bf-afc9-221bdc9139ad}
+	EndGlobalSection
+EndGlobal
