@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using Modding;
 using Modding.Blocks;
@@ -11,13 +11,13 @@ namespace BlockVersionChanger
         public override void OnLoad()
         {
             // events
-            Events.OnBlockInit += OnBlockInit; //�u���b�N�ݒu���ɃC�x���g����
+            Events.OnBlockInit += OnBlockInit; //ブロック設置時にイベント発火
         }
 
         /// <summary>
-        /// ?u???b?N??u??????????
+        /// ブロック設置時に呼ばれる関数
         /// </summary>
-        /// <param name="block">??u?????u???b?N</param>
+        /// <param name="block">設置したブロック</param>
         private void OnBlockInit(Block block)
         {
 
@@ -27,7 +27,7 @@ namespace BlockVersionChanger
             bool hasVersion = true;
             bool hasAltCollider = false;
 
-            //version??????u???b?N??o?[?W??????X?p?N???X????????
+            //versionを持つブロックにバージョン変更用クラスを追加する
             switch (block.InternalObject.Prefab.Type)
             {
                 case BlockType.Bomb:
