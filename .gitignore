@@ -1,2 +1,12 @@
 # VisualStudio
 *.csproj.user
+/src/.vs/
+/src/**/bin/
+/src/**/obj/
+
+# VSCode
+/.vscode/
+omnisharp.json
+
+# コンパイル済みファイル
+**/*.dll
