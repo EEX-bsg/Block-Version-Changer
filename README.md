@@ -4,7 +4,7 @@
 
 [![Steam Downloads](https://img.shields.io/steam/downloads/3357702690?color=blue&label=Steam%20Downloads&logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3357702690)
 [![Steam Subscribers](https://img.shields.io/steam/subscriptions/3357702690?color=blue&label=Subscribers&logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3357702690)
-[![GitHub stars](https://img.shields.io/github/stars/EEX-slime/BlockVersionChanger?style=social)](https://github.com/EEX-bsg/Block-Version-Changer/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/EEX-bsg/Block-Version-Changer?style=social)](https://github.com/EEX-bsg/Block-Version-Changer/stargazers)
 
 Besiegeのブロックを過去のバージョンの挙動に戻せるMod
 
@@ -31,7 +31,7 @@ Besiegeはマシンの後方互換性の為、一部ブロックの内部にブ�
 ## 🎮 使い方
 
 1. ブロックを配置して設定画面を開く
-2. 新しく追加された`BlockVER`セクションを確認
+2. 新しく追加された`BLOCKVER`セクションを確認
 3. 希望するバージョンを選択 (v1.6.0では、0か1の２つです)
 4. 即座に選択したバージョンの挙動が適用されます
 
@@ -40,9 +40,9 @@ Besiegeはマシンの後方互換性の為、一部ブロックの内部にブ�
 
 ## 📊 統計
 
-[![Top Language](https://img.shields.io/github/languages/top/EEX-slime/BlockVersionChanger?color=red)](https://github.com/EEX-bsg/Block-Version-Changer)
-[![Code Size](https://img.shields.io/github/languages/code-size/EEX-slime/BlockVersionChanger?color=green)](https://github.com/EEX-slime/BlockVersionChanger)
-[![Last Commit](https://img.shields.io/github/last-commit/EEX-slime/BlockVersionChanger?color=blue)](https://github.com/EEX-slime/BlockVersionChanger/commits/main)
+[![Top Language](https://img.shields.io/github/languages/top/EEX-bsg/Block-Version-Changer?color=red)](https://github.com/EEX-bsg/Block-Version-Changer)
+[![Code Size](https://img.shields.io/github/languages/code-size/EEX-bsg/Block-Version-Changer?color=green)](https://github.com/EEX-bsg/BlockVersionChanger)
+[![Last Commit](https://img.shields.io/github/last-commit/EEX-bsg/Block-Version-Changer?color=blue)](https://github.com/EEX-bsg/BlockVersionChanger/commits/main)
 
 ## 📫 連絡先・サポート
 
