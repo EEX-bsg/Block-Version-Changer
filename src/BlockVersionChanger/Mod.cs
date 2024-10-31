@@ -6,19 +6,20 @@ using BlockVersionChanger;
 
 namespace BlockVersionChanger
 {
-	public class Mod : ModEntryPoint
-	{
-		public override void OnLoad()
-		{
-			// events
-			Events.OnBlockInit += OnBlockInit; //ブロック設置時にイベント発火
-		}
+    public class Mod : ModEntryPoint
+    {
+        public override void OnLoad()
+        {
+            // events
+            Events.OnBlockInit += OnBlockInit; //ブロック設置時にイベント発火
+        }
 
         /// <summary>
-        /// ブロック設置時に呼ばれる関数
+        /// ?u???b?N??u??????????
         /// </summary>
-        /// <param name="block">設置したブロック</param>
-		private void OnBlockInit(Block block) {
+        /// <param name="block">??u?????u???b?N</param>
+        private void OnBlockInit(Block block)
+        {
 
             BlockBehaviour targetComponent = null;
             BlockType type = block.InternalObject.Prefab.Type;
@@ -26,8 +27,9 @@ namespace BlockVersionChanger
             bool hasVersion = true;
             bool hasAltCollider = false;
 
-            //versionを持つブロックにバージョン変更用クラスを追加する
-			switch(block.InternalObject.Prefab.Type){
+            //version??????u???b?N??o?[?W??????X?p?N???X????????
+            switch (block.InternalObject.Prefab.Type)
+            {
                 case BlockType.Bomb:
                     targetComponent = block.GameObject.GetComponent<ExplodeOnCollideBlock>();
                     break;
@@ -64,7 +66,7 @@ namespace BlockVersionChanger
                     targetComponent = block.GameObject.GetComponent<ArmorBlock>();
                     break;
             }
-            if(targetComponent != null)
+            if (targetComponent != null)
             {
                 if (hasVersion)
                 {
@@ -78,5 +80,5 @@ namespace BlockVersionChanger
                 }
             }
         }
-	}
+    }
 }
