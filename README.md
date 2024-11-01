@@ -2,13 +2,16 @@
 
 # BlockVersionChanger
 
+<img src="logo_1920x1080.png" height="300px" alt="BlockVersionChanger Icon">
+
+
+![Besiege Version](https://img.shields.io/badge/Besiege-1.60+-red)
+![Steam Views](https://img.shields.io/steam/views/3357702690?color=blue&label=Steam%20Views&logo=steam)
 [![Steam Downloads](https://img.shields.io/steam/downloads/3357702690?color=blue&label=Steam%20Downloads&logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3357702690)
-[![Steam Subscribers](https://img.shields.io/steam/subscriptions/3357702690?color=blue&label=Subscribers&logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3357702690)
+![Steam Favorites](https://img.shields.io/steam/favorites/3357702690?color=yellow&label=Favorites&logo=steam)
 [![GitHub stars](https://img.shields.io/github/stars/EEX-bsg/Block-Version-Changer?style=social)](https://github.com/EEX-bsg/Block-Version-Changer/stargazers)
 
 Besiegeのブロックを過去のバージョンの挙動に戻せるMod
-
-<img src="https://raw.githubusercontent.com/EEX-bsg/Block-Version-Changer/main/logo.png" width="200" alt="BlockVersionChanger Icon">
 
 </div>
 
@@ -40,9 +43,11 @@ Besiegeはマシンの後方互換性の為、一部ブロックの内部にブ�
 
 ## 📊 統計
 
+[![Release](https://img.shields.io/github/v/release/EEX-bsg/Block-Version-Changer?include_prereleases&color=green)](https://github.com/EEX-bsg/Block-Version-Changer/releases)
 [![Top Language](https://img.shields.io/github/languages/top/EEX-bsg/Block-Version-Changer?color=red)](https://github.com/EEX-bsg/Block-Version-Changer)
-[![Code Size](https://img.shields.io/github/languages/code-size/EEX-bsg/Block-Version-Changer?color=green)](https://github.com/EEX-bsg/BlockVersionChanger)
-[![Last Commit](https://img.shields.io/github/last-commit/EEX-bsg/Block-Version-Changer?color=blue)](https://github.com/EEX-bsg/BlockVersionChanger/commits/main)
+[![Code Size](https://img.shields.io/github/languages/code-size/EEX-bsg/Block-Version-Changer?color=green)](https://github.com/EEX-bsg/Block-Version-Changer)
+[![Last Commit](https://img.shields.io/github/last-commit/EEX-bsg/Block-Version-Changer?color=blue)](https://github.com/EEX-bsg/Block-Version-Changer/commits/main)
+[![Lines of Code](https://tokei.rs/b1/github/EEX-bsg/Block-Version-Changer?style=flat)](https://github.com/EEX-bsg/Block-Version-Changer)
 
 ## 📫 連絡先・サポート
 
