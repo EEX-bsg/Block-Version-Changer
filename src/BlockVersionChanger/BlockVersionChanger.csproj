@@ -34,6 +34,12 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>$(BESIEGE_GAME_ASSEMBLIES)Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Besiege.UI">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\346010\2913469777\UIFactory\Besiege.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Besiege.UI.Bridge">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\346010\2913469777\UIFactory\Besiege.UI.Bridge.dll</HintPath>
+    </Reference>
     <Reference Include="DynamicText">
       <HintPath>$(BESIEGE_GAME_ASSEMBLIES)DynamicText.dll</HintPath>
     </Reference>
@@ -44,12 +50,18 @@
     <Reference Include="UnityEngine">
       <HintPath>$(BESIEGE_UNITY_ASSEMBLIES)UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AltColliderChanger.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VersionChanger.cs" />
+    <Compile Include="ModController.cs" />
+    <Compile Include="UI\ModRequirementNotice.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

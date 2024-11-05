@@ -1,83 +1,44 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Modding;
 using Modding.Blocks;
 using BlockVersionChanger;
+using BlockVersionChanger.UI;
+using Localisation;
 
 namespace BlockVersionChanger
 {
     public class Mod : ModEntryPoint
     {
-        public override void OnLoad()
+        //Modで保持するオブジェクトとか
+        public static GameObject ModController;
+        //Modで保持する定数
+        public static readonly string ModName = "BlockVersionChanger";
+        public static class UIFactory
         {
-            // events
-            Events.OnBlockInit += OnBlockInit; //ブロック設置時にイベント発火
+            public static readonly string name = "UIFactory";
+            public static readonly Guid id = new Guid("61d89dcf-88a2-4a16-8eb2-08aeed441f1d");
+            public static readonly string workshopUrl = "https://steamcommunity.com/sharedfiles/filedetails/?id=2913469777";
         }
 
-        /// <summary>
-        /// ブロック設置時に呼ばれる関数
-        /// </summary>
-        /// <param name="block">設置したブロック</param>
-        private void OnBlockInit(Block block)
+        //パブリックなフラグとか変数とか
+        public static bool isUIFactory = false;
+        public static bool isEnglish = true;
+
+
+        public override void OnLoad()
         {
-
-            BlockBehaviour targetComponent = null;
-            BlockType type = block.InternalObject.Prefab.Type;
-
-            bool hasVersion = true;
-            bool hasAltCollider = false;
-
-            //versionを持つブロックにバージョン変更用クラスを追加する
-            switch (block.InternalObject.Prefab.Type)
-            {
-                case BlockType.Bomb:
-                    targetComponent = block.GameObject.GetComponent<ExplodeOnCollideBlock>();
-                    break;
-                case BlockType.Grenade:
-                    targetComponent = block.GameObject.GetComponent<ControllableBomb>();
-                    break;
-                case BlockType.Wheel:
-                case BlockType.LargeWheel:
-                case BlockType.CogMediumPowered:
-                    targetComponent = block.GameObject.GetComponent<CogMotorControllerHinge>();
-                    hasAltCollider = true;
-                    break;
-                case BlockType.WheelUnpowered:
-                case BlockType.LargeWheelUnpowered:
-                    targetComponent = block.GameObject.GetComponent<FreeWheel>();
-                    hasVersion = false;
-                    hasAltCollider = true;
-                    break;
-                case BlockType.BuildSurface:
-                    targetComponent = block.GameObject.GetComponent<BuildSurface>();
-                    break;
-                case BlockType.Sail:
-                    targetComponent = block.GameObject.GetComponent<SailBlock>();
-                    break;
-                case BlockType.StartingBlock:
-                    targetComponent = block.GameObject.GetComponent<SourceBlock>();
-                    break;
-                case BlockType.DoubleWoodenBlock:
-                case BlockType.WoodenPole:
-                case BlockType.Log:
-                    targetComponent = block.GameObject.GetComponent<ShorteningBlock>();
-                    break;
-                case BlockType.WoodenPanel:
-                    targetComponent = block.GameObject.GetComponent<ArmorBlock>();
-                    break;
+            UnityEngine.Object.DontDestroyOnLoad(ModController = new GameObject(ModName));
+            isUIFactory = Mods.IsModLoaded(UIFactory.id);
+            if(SingleInstance<LocalisationManager>.Instance.currLangName == "日本語"){
+                isEnglish = false;
             }
-            if (targetComponent != null)
-            {
-                if (hasVersion)
-                {
-                    VersionChanger versionChanger = block.GameObject.AddComponent<VersionChanger>();
-                    versionChanger.InitializeComponent(targetComponent, type);
-                }
-                if (hasAltCollider)
-                {
-                    AltColliderChanger altColliderChanger = block.GameObject.AddComponent<AltColliderChanger>();
-                    altColliderChanger.InitializeComponent(targetComponent);
-                }
+
+            if(isUIFactory){
+                ModController.AddComponent<ModController>();
+            }else{
+                ModController.AddComponent<ModRequirementNotice>();
             }
         }
     }
