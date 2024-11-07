@@ -48,46 +48,15 @@ namespace BlockVersionChanger
         }
 
         /// <summary>
-        /// 強制コライダー変更
-        /// バージョンデータを上書きしたデータでブロックを再設置して強制上書きしています
-        /// </summary>
-        /// <param name="isMeshCol">上書きするコライダーモード</param>
-        //public void SetOptColliderValue(bool isMeshCol)
-        //{
-        //    if (targetComponent == null) return;
-        //    if (targetComponent.isSimulating) return;
-        //    if (isMeshCol == GetOptColliderValue()) return;
-
-        //    Machine machine = targetComponent.ParentMachine; //親マシン
-        //    BlockBehaviour blockBehaviour; //コピー後のブロック
-
-        //    BlockInfo blockInfo = BlockInfo.FromBlockBehaviour(targetComponent);
-        //    blockInfo.BlockData.Write("bmt-opt-collider", isMeshCol);//バージョン書き込み
-        //    blockInfo.BlockData.WasLoadedFromFile = true; //ファイルから読み込んだ体にしないとversionが強制的に1になります
-
-        //    machine.isLoadingInfo = true; //マシン情報更新中
-
-        //    machine.RemoveBlock(targetComponent); //元のブロックを削除
-
-        //    if (!machine.AddBlock(blockInfo, out blockBehaviour)) //バージョンを書き換えたブロックを設置
-        //    {
-        //        Debug.LogError("[BlockVersionChanger] ブロックコピーに失敗した！");
-        //    }
-        //    machine.isLoadingInfo = false;//マシン情報更新中
-        //}
-
-        /// <summary>
         /// コライダー変更トグルのハンドラー
         /// </summary>
         /// <param name="value">入力値</param>
         private void optimiseColliderToggle_Toggled(bool value)
         {
-            optimiseColliderToggle.SetValue(value);
-
             //どうやら、同名スライダーを追加する事で乗っ取りが出来たようで、
             //ブロック置き換えしなくてもコライダー切り替えが出来てしまった。
             //versionの場合はそもそもスライダーもないので無理です。
-            //SetOptColliderValue(value);
+            optimiseColliderToggle.SetValue(value);
         }
     }
 }

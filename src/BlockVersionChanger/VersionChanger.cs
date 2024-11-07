@@ -17,12 +17,13 @@ namespace BlockVersionChanger
         public MMenu VersionMenu;
 
         private GameObject WarningUI;//バージョン変更警告UI
-        private GameObject BlockMapperObj;
+        private GameObject BlockMapperObj;//このブロックの設定UI (設定閉じたの検知してUI消す用)
         private BlockBehaviour targetComponent = null; //versionの入っているコンポーネント
         private BlockType blockType; //ブロックの名前
         private Project project;
+
         //flag
-        private bool isValueChangedBlocked = false; //一時的にversionメニューのハンドラーブロック
+        private bool isValueChangedBlocked = false; //一時的にversion値が変わってもその先の処理をスキップさせる
 
 
         void Start()
@@ -37,10 +38,9 @@ namespace BlockVersionChanger
 
         void Update()
         {
-            if(WarningUI && !BlockMapperObj){
-                DestroyUI();
-            }
-            if(targetComponent.isSimulating){
+            //シミュ開始した時、もしくはブロック設定UIが消えたときに、警告UIを消す
+            if (targetComponent.isSimulating || (WarningUI && !BlockMapperObj))
+            {
                 DestroyUI();
             }
         }
@@ -180,17 +180,22 @@ namespace BlockVersionChanger
             machine.isLoadingInfo = false;//マシン情報更新中
         }
 
+        /// <summary>
+        /// 警告UIの生成
+        /// </summary>
         private void SetupWarningUI()
         {
-            if(BlockMapperObj = GameObject.Find("BlockMapper - " + blockType.ToString()))
+            //ブロック設定UIを見つける、見つからなければ警告UIを生成しない。
+            if (BlockMapperObj = GameObject.Find("BlockMapper - " + blockType.ToString()))
             {
+                //警告UI生成
                 WarningUI = Instantiate(Mod.UIPrefab_WarningVersionDown);
                 WarningUI.name = "WarningVersionDown - " + blockType.ToString();
-                WarningUI.transform.SetParent(HierarchyUtils.FindObject("Canvas"));
+                WarningUI.transform.SetParent(HierarchyUtils.FindObject("Canvas"));//ここかUIFactory以外だと動かない(canvasが無い)
                 WarningUI.transform.localPosition = new Vector3(0f, 0f, 0f);
                 project = WarningUI.GetComponent<Project>();
                 WarningUI.SetActive(true);
-                project.RebuildTransformList();
+                project.RebuildTransformList();//お ま じ な い
 
                 //イベント紐づけ
                 project["UpVerButton"].gameObject.GetComponent<Button>().onClick.AddListener(UpVerButton_OnClicked);
@@ -204,24 +209,33 @@ namespace BlockVersionChanger
             }
         }
 
+        /// <summary>
+        /// バージョンを1にする
+        /// </summary>
         private void UpVerButton_OnClicked()
         {
-            DestroyUI();
-            isValueChangedBlocked = true;
-            VersionMenu.Value = 1;
-            SetVersion(1);
+            DestroyUI();//UI削除
+            isValueChangedBlocked = true;//これやらないとまた警告UIでちゃう
+            VersionMenu.Value = 1;//スライダー(XML)書き込み
+            SetVersion(1);//ブロック書き込み
             UpdateDoNotShowWarning();
         }
 
+        /// <summary>
+        /// バージョンを0にする
+        /// </summary>
         private void DownVerButton_OnClicked()
         {
-            DestroyUI();
-            isValueChangedBlocked = true;
-            VersionMenu.Value = 0;
-            SetVersion(0);
+            DestroyUI();//UI削除
+            isValueChangedBlocked = true;//これやらないとまた警告UIでちゃう
+            VersionMenu.Value = 0;//スライダー(XML)書き込み
+            SetVersion(0);//ブロック書き込み
             UpdateDoNotShowWarning();
         }
 
+        /// <summary>
+        /// 警告UI非表示トグルの値を見てコンフィグ更新
+        /// </summary>
         private void UpdateDoNotShowWarning()
         {
             Mod.DoNotShowWarning = project["HideWarningToggleButton"].GetComponent<Toggle>().isOn;
@@ -233,16 +247,21 @@ namespace BlockVersionChanger
         /// <param name="value">入力値</param>
         private void VersionMenu_ValueChanged(int value)
         {
-            if (isValueChangedBlocked){
+            //一時的に処理スキップ(UI呼び出しとかをしない為)
+            if (isValueChangedBlocked)
+            {
                 isValueChangedBlocked = false;
                 return;
             }
-            if(WarningUI){
+            //UIが表示されている場合はメニュー固定化
+            if (WarningUI)
+            {
                 isValueChangedBlocked = true;
                 VersionMenu.Value = GetVersion();
             }
             else
             {
+                //コアブロの時もメニュー固定化(技術的にバージョン変更不可)
                 if (blockType == BlockType.StartingBlock)
                 {
                     isValueChangedBlocked = true;
@@ -250,10 +269,14 @@ namespace BlockVersionChanger
                     Debug.Log("[BlockVersionChanger] StartingBlockはバージョン変更不可能です。");
                     return;
                 }
-                if(value >= 1 || Mod.DoNotShowWarning){
+                //バージョンが1以上か、警告非表示の時はバージョン変更
+                if (value >= 1 || Mod.DoNotShowWarning)
+                {
                     SetVersion(value);
                     return;
                 }
+                //それ以外はUI表示 -> ボタンクリックでバージョン変更
+                //一旦メニューの変更無効化
                 isValueChangedBlocked = true;
                 VersionMenu.Value = GetVersion();
                 SetupWarningUI();
@@ -265,6 +288,7 @@ namespace BlockVersionChanger
             Destroy(WarningUI);
         }
 
+        //ブロック消える時にUIも消す
         void OnDestroy()
         {
             DestroyUI();

@@ -1,16 +1,10 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Modding;
 using Modding.Blocks;
-using BlockVersionChanger;
-using System.Reflection;
 using Besiege.UI;
-using Besiege.UI.Bridge;
 using Besiege.UI.Serialization;
-using Besiege.UI.Extensions;
 using UnityEngine.UI;
 
 namespace BlockVersionChanger
@@ -66,13 +60,18 @@ namespace BlockVersionChanger
             bool hasVersion = true;
             bool hasAltCollider = false;
 
+            //UIFactoryのプロジェクトロード
+            //別にOnBlockInitでやらなくても良いけど、案外どこでも大丈夫そう
+            //OnSceneChangedが安牌ではある(公式推奨)
             if (Mod.UIPrefab_WarningVersionDown == null)
             {
+                //Make.OnReadyを使うと、UIFactoryがロード完了してる時に実行してくれるようになります。神
+                //ロードが間に合ってない場合は、ロード終わってから実行してくれる...はず
                 Make.OnReady(Mod.ModName, () =>
                 {
                     Project project = Make.LoadProject(Mod.ModName, "WarningVersionDown");
                     Mod.UIPrefab_WarningVersionDown = project.gameObject;
-                    Mod.UIPrefab_WarningVersionDown.SetActive(false);
+                    Mod.UIPrefab_WarningVersionDown.SetActive(false);//雛形なので非表示で保持
 
                     //ローカライズ
                     project["Header_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "title_en" : "title_jp"];
@@ -124,11 +123,14 @@ namespace BlockVersionChanger
             }
             if (targetComponent != null)
             {
+                //バージョンタグを持っているブロック
                 if (hasVersion)
                 {
                     VersionChanger versionChanger = block.GameObject.AddComponent<VersionChanger>();
                     versionChanger.InitializeComponent(targetComponent, type);
                 }
+                //代替コライダーを持つブロック(ホイール系)
+                //無動力(大)ホイールはversionは無いけどこっちはある。逆にサフェはversionで管理
                 if (hasAltCollider)
                 {
                     AltColliderChanger altColliderChanger = block.GameObject.AddComponent<AltColliderChanger>();
