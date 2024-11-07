@@ -28,10 +28,10 @@ namespace BlockVersionChanger
             {"contents_jp", "古いバージョンはバグを含む可能性があり、 \nまた将来のBesiegeアップデートで使用できなくなる場合があります。 \n \n以下のブロックはバグを含み、大きな挙動変更はないため、 \nバージョンの変更が推奨されていません。 \nスタートブロック, ボム, リモートグレネード, 帆  \n \nユーザーの自己責任でバージョンを変更してください。  \nそれによって生じたマシンの不具合や、ユーザーの不利益に対して  \n本Mod制作者(EEX-slime) 及びSpiderling Studioは一切の責任を負いません。"},
             {"hide-warning-toggle_en", "I understand and don't show this warning again"},
             {"hide-warning-toggle_jp", "内容を理解し、今後警告を出さない"},
-            {"up-ver-button_en", "Update version"},
-            {"up-ver-button_jp", "バージョンを最新にする"},
-            {"down-ver-button_en", "Downgrade version"},
-            {"down-ver-button_jp", "バージョンを戻す"},
+            {"up-ver-button_en", "Update version(V1+)"},
+            {"up-ver-button_jp", "バージョンを最新にする(v1+)"},
+            {"down-ver-button_en", "Downgrade version(v0)"},
+            {"down-ver-button_jp", "バージョンを戻す(v0)"},
         };
 
 

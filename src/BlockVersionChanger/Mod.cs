@@ -27,12 +27,23 @@ namespace BlockVersionChanger
         public static bool isUIFactory = false;
         public static bool isEnglish = true;
         private static bool _doNotShowWarning = false;
-        public static bool doNotShowWarning
+        private static bool initialised = false;
+        public static bool DoNotShowWarning
         {
-            get => _doNotShowWarning;
+            get
+            {
+                if(!initialised)
+                {
+                    _doNotShowWarning = Configuration.GetData().HasKey("HideDowngradeWarning") && Configuration.GetData().ReadBool("HideDowngradeWarning");
+                    initialised = true;
+                }
+                return _doNotShowWarning;
+            }
             set
             {
+                if(value.Equals(_doNotShowWarning)) return;
                 _doNotShowWarning = value;
+                Configuration.GetData().Write("HideDowngradeWarning", value);
             }
         }
 

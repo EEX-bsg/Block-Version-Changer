@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Modding;
 using Besiege.UI.Extensions;
 using Besiege.UI.Serialization;
 using UnityEngine.UI;
-using InternalModding.Blocks;
 
 
 namespace BlockVersionChanger
@@ -167,7 +165,6 @@ namespace BlockVersionChanger
             if (newVersion == GetVersion()) return;
 
             Machine machine = targetComponent.ParentMachine; //親マシン
-            BlockBehaviour blockBehaviour; //コピー後のブロック
 
             BlockInfo blockInfo = BlockInfo.FromBlockBehaviour(targetComponent);
             blockInfo.BlockData.Write("bmt-version", newVersion);//バージョン書き込み
@@ -176,7 +173,7 @@ namespace BlockVersionChanger
             machine.isLoadingInfo = true; //マシン情報更新中
             machine.RemoveBlock(targetComponent); //元のブロックを削除
 
-            if (!machine.AddBlock(blockInfo, out blockBehaviour)) //バージョンを書き換えたブロックを設置
+            if (!machine.AddBlock(blockInfo, out _)) //バージョンを書き換えたブロックを設置
             {
                 Debug.LogError("[BlockVersionChanger] ブロックコピーに失敗した！");
             }
@@ -227,7 +224,7 @@ namespace BlockVersionChanger
 
         private void UpdateDoNotShowWarning()
         {
-            Mod.doNotShowWarning = project["HideWarningToggleButton"].GetComponent<Toggle>().isOn;
+            Mod.DoNotShowWarning = project["HideWarningToggleButton"].GetComponent<Toggle>().isOn;
         }
 
         /// <summary>
@@ -253,7 +250,7 @@ namespace BlockVersionChanger
                     Debug.Log("[BlockVersionChanger] StartingBlockはバージョン変更不可能です。");
                     return;
                 }
-                if(value >= 1 || Mod.doNotShowWarning){
+                if(value >= 1 || Mod.DoNotShowWarning){
                     SetVersion(value);
                     return;
                 }
