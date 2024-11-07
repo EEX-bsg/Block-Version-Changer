@@ -5,8 +5,8 @@
       "Active": true,
       "TransformData": {
         "localPosition": {
-          "x": -424.0,
-          "y": -91.0,
+          "x": 495.0,
+          "y": -96.0,
           "z": 0.0
         },
         "localRotation": {
@@ -38,8 +38,8 @@
           "y": 0.5
         },
         "anchoredPosition": {
-          "x": -424.0,
-          "y": -91.0
+          "x": 495.0,
+          "y": -96.0
         },
         "sizeDelta": {
           "x": 600.0,
@@ -295,7 +295,7 @@
               "TransformData": {
                 "localPosition": {
                   "x": 0.0,
-                  "y": -20.0,
+                  "y": -22.6413383,
                   "z": 0.0
                 },
                 "localRotation": {
@@ -328,7 +328,7 @@
                 },
                 "anchoredPosition": {
                   "x": 0.0,
-                  "y": 0.0
+                  "y": -2.64133835
                 },
                 "sizeDelta": {
                   "x": 160.0,
@@ -413,7 +413,7 @@
             },
             {
               "Name": "CloseButton",
-              "Active": true,
+              "Active": false,
               "TransformData": {
                 "localPosition": {
                   "x": 300.0,
@@ -686,7 +686,7 @@
           ]
         },
         {
-          "Name": "ScrollView",
+          "Name": "View",
           "Active": true,
           "TransformData": {
             "localPosition": {
@@ -732,63 +732,6 @@
             }
           },
           "ComponentData": [
-            {
-              "Type": "UnityEngine.UI.ScrollRect, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-              "Values": {
-                "m_Content": {
-                  "m_FileID": 0,
-                  "m_PathID": 0
-                },
-                "m_Horizontal": true,
-                "m_Vertical": true,
-                "m_MovementType": 2,
-                "m_Elasticity": 0.10000000149011612,
-                "m_Inertia": false,
-                "m_DecelerationRate": 0.13500000536441803,
-                "m_ScrollSensitivity": 20.0,
-                "m_Viewport": {
-                  "m_FileID": 10001,
-                  "m_PathID": 0
-                },
-                "m_HorizontalScrollbar": {
-                  "m_FileID": 10002,
-                  "m_PathID": 0
-                },
-                "m_VerticalScrollbar": {
-                  "m_FileID": 10003,
-                  "m_PathID": 0
-                },
-                "m_HorizontalScrollbarVisibility": 2,
-                "m_VerticalScrollbarVisibility": 2,
-                "m_HorizontalScrollbarSpacing": 0.0,
-                "m_VerticalScrollbarSpacing": 0.0,
-                "m_OnValueChanged": {
-                  "m_PersistentCalls": {
-                    "m_Calls": []
-                  },
-                  "m_TypeName": "UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-                }
-              },
-              "GameObjectRefs": {},
-              "ComponentRefs": {
-                "10001": {
-                  "Type": "UnityEngine.RectTransform, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                  "Path": "Window/ScrollView/Viewport",
-                  "Index": 0
-                },
-                "10002": {
-                  "Type": "UnityEngine.UI.Scrollbar, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                  "Path": "Window/ScrollView/Scrollbar Horizontal",
-                  "Index": 0
-                },
-                "10003": {
-                  "Type": "UnityEngine.UI.Scrollbar, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                  "Path": "Window/ScrollView/Scrollbar Vertical",
-                  "Index": 0
-                }
-              },
-              "SpriteRefs": {}
-            },
             {
               "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
               "Values": {
@@ -977,7 +920,7 @@
                       "TransformData": {
                         "localPosition": {
                           "x": 300.0,
-                          "y": -10.0,
+                          "y": -5.0,
                           "z": 0.0
                         },
                         "localRotation": {
@@ -1010,17 +953,17 @@
                         },
                         "anchoredPosition": {
                           "x": 0.0,
-                          "y": 170.0
+                          "y": 175.0
                         },
                         "sizeDelta": {
                           "x": 0.0,
-                          "y": 30.0
+                          "y": 45.0
                         }
                       },
                       "ComponentData": [],
                       "Children": [
                         {
-                          "Name": "Text",
+                          "Name": "Header_Text",
                           "Active": true,
                           "TransformData": {
                             "localPosition": {
@@ -1074,9 +1017,9 @@
                                   "m_PathID": 0
                                 },
                                 "m_Color": {
-                                  "r": 1.0,
-                                  "g": 0.0,
-                                  "b": 0.0,
+                                  "r": 0.97000002861022949,
+                                  "g": 0.12999999523162842,
+                                  "b": 0.28999999165534973,
                                   "a": 1.0
                                 },
                                 "m_RaycastTarget": false,
@@ -1091,7 +1034,7 @@
                                     "m_FileID": 0,
                                     "m_PathID": 0
                                   },
-                                  "m_FontSize": 18,
+                                  "m_FontSize": 23,
                                   "m_FontStyle": 0,
                                   "m_BestFit": false,
                                   "m_MinSize": 1,
@@ -1101,7 +1044,7 @@
                                   "m_RichText": true,
                                   "m_HorizontalOverflow": 1,
                                   "m_VerticalOverflow": 1,
-                                  "m_LineSpacing": 1.0
+                                  "m_LineSpacing": 0.0
                                 },
                                 "m_Text": "ブロックバージョンを下げようとしています！"
                               },
@@ -1132,7 +1075,7 @@
                               "ComponentRefs": {
                                 "10001": {
                                   "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                  "Path": "Window/ScrollView/Viewport/Content/Header/Text",
+                                  "Path": "Window/View/Viewport/Content/Header/Header_Text",
                                   "Index": 0
                                 }
                               },
@@ -1149,7 +1092,7 @@
                       "TransformData": {
                         "localPosition": {
                           "x": 300.0,
-                          "y": -40.0,
+                          "y": -60.0,
                           "z": 0.0
                         },
                         "localRotation": {
@@ -1182,7 +1125,7 @@
                         },
                         "anchoredPosition": {
                           "x": 0.0,
-                          "y": -40.0
+                          "y": -60.0
                         },
                         "sizeDelta": {
                           "x": 600.0,
@@ -1192,7 +1135,7 @@
                       "ComponentData": [],
                       "Children": [
                         {
-                          "Name": "Text",
+                          "Name": "Contents_Text",
                           "Active": true,
                           "TransformData": {
                             "localPosition": {
@@ -1218,7 +1161,7 @@
                             },
                             "anchorMin": {
                               "x": 0.0,
-                              "y": 1.0
+                              "y": 0.0
                             },
                             "anchorMax": {
                               "x": 1.0,
@@ -1234,7 +1177,7 @@
                             },
                             "sizeDelta": {
                               "x": 0.0,
-                              "y": 60.0
+                              "y": 0.0
                             }
                           },
                           "ComponentData": [
@@ -1275,7 +1218,7 @@
                                   "m_VerticalOverflow": 1,
                                   "m_LineSpacing": 1.25
                                 },
-                                "m_Text": "古いバージョンはバグを含む可能性があり、\nまた将来のBesiegeアップデートで使用できなくなる場合があります。"
+                                "m_Text": "古いバージョンはバグを含む可能性があり、 \n また将来のBesiegeアップデートで使用できなくなる場合があります。 \n  \n 以下のブロックはバグを含み、大きな挙動変更はないため、 \n バージョンの変更が推奨されていません。 \n スタートブロック, ボム, リモートグレネード, 帆  \n  \n ユーザーの自己責任でバージョンを変更してください。  \n それによって生じたマシンの不具合や、ユーザーの不利益に対して  \n 本Mod制作者(EEX-slime) 及びSpiderling Studioは一切の責任を負いません。\n "
                               },
                               "GameObjectRefs": {},
                               "ComponentRefs": {},
@@ -1304,251 +1247,7 @@
                               "ComponentRefs": {
                                 "10001": {
                                   "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                  "Path": "Window/ScrollView/Viewport/Content/Contents/Text",
-                                  "Index": 0
-                                }
-                              },
-                              "SpriteRefs": {}
-                            }
-                          ],
-                          "Children": []
-                        },
-                        {
-                          "Name": "Text(Clone)",
-                          "Active": true,
-                          "TransformData": {
-                            "localPosition": {
-                              "x": 0.0,
-                              "y": -60.0,
-                              "z": 0.0
-                            },
-                            "localRotation": {
-                              "w": 1.0,
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "eulerAngles": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": 0.0
-                              }
-                            },
-                            "localScale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "anchorMin": {
-                              "x": 0.0,
-                              "y": 1.0
-                            },
-                            "anchorMax": {
-                              "x": 1.0,
-                              "y": 1.0
-                            },
-                            "pivot": {
-                              "x": 0.5,
-                              "y": 1.0
-                            },
-                            "anchoredPosition": {
-                              "x": 0.0,
-                              "y": -60.0
-                            },
-                            "sizeDelta": {
-                              "x": 0.0,
-                              "y": 60.0
-                            }
-                          },
-                          "ComponentData": [
-                            {
-                              "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                              "Values": {
-                                "m_Material": {
-                                  "m_FileID": 0,
-                                  "m_PathID": 0
-                                },
-                                "m_Color": {
-                                  "r": 1.0,
-                                  "g": 1.0,
-                                  "b": 1.0,
-                                  "a": 1.0
-                                },
-                                "m_RaycastTarget": false,
-                                "m_OnCullStateChanged": {
-                                  "m_PersistentCalls": {
-                                    "m_Calls": []
-                                  },
-                                  "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-                                },
-                                "m_FontData": {
-                                  "m_Font": {
-                                    "m_FileID": 0,
-                                    "m_PathID": 0
-                                  },
-                                  "m_FontSize": 16,
-                                  "m_FontStyle": 0,
-                                  "m_BestFit": false,
-                                  "m_MinSize": 1,
-                                  "m_MaxSize": 40,
-                                  "m_Alignment": 4,
-                                  "m_AlignByGeometry": true,
-                                  "m_RichText": true,
-                                  "m_HorizontalOverflow": 1,
-                                  "m_VerticalOverflow": 1,
-                                  "m_LineSpacing": 1.25
-                                },
-                                "m_Text": "以下のブロックはバグを含み、大きな挙動変更はないため、\nバージョンの変更が推奨されていません。\nスタートブロック, ボム, リモートグレネード, 帆 "
-                              },
-                              "GameObjectRefs": {},
-                              "ComponentRefs": {},
-                              "SpriteRefs": {}
-                            },
-                            {
-                              "Type": "Besiege.UI.Bridge.LetterSpacing, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                              "Values": {
-                                "m_spacing": 0.0
-                              },
-                              "GameObjectRefs": {},
-                              "ComponentRefs": {},
-                              "SpriteRefs": {}
-                            },
-                            {
-                              "Type": "Besiege.UI.Behaviours.Translator, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                              "Values": {
-                                "TextComponent": {
-                                  "m_FileID": 10001,
-                                  "m_PathID": 0
-                                },
-                                "Key": "",
-                                "BuiltInLocalizationKey": 0
-                              },
-                              "GameObjectRefs": {},
-                              "ComponentRefs": {
-                                "10001": {
-                                  "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                  "Path": "Window/ScrollView/Viewport/Content/Contents/Text(Clone)",
-                                  "Index": 0
-                                }
-                              },
-                              "SpriteRefs": {}
-                            }
-                          ],
-                          "Children": []
-                        },
-                        {
-                          "Name": "Text(Clone)",
-                          "Active": true,
-                          "TransformData": {
-                            "localPosition": {
-                              "x": 0.0,
-                              "y": -120.0,
-                              "z": 0.0
-                            },
-                            "localRotation": {
-                              "w": 1.0,
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "eulerAngles": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": 0.0
-                              }
-                            },
-                            "localScale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "anchorMin": {
-                              "x": 0.0,
-                              "y": 1.0
-                            },
-                            "anchorMax": {
-                              "x": 1.0,
-                              "y": 1.0
-                            },
-                            "pivot": {
-                              "x": 0.5,
-                              "y": 1.0
-                            },
-                            "anchoredPosition": {
-                              "x": 0.0,
-                              "y": -120.0
-                            },
-                            "sizeDelta": {
-                              "x": 0.0,
-                              "y": 80.0
-                            }
-                          },
-                          "ComponentData": [
-                            {
-                              "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                              "Values": {
-                                "m_Material": {
-                                  "m_FileID": 0,
-                                  "m_PathID": 0
-                                },
-                                "m_Color": {
-                                  "r": 1.0,
-                                  "g": 1.0,
-                                  "b": 1.0,
-                                  "a": 1.0
-                                },
-                                "m_RaycastTarget": false,
-                                "m_OnCullStateChanged": {
-                                  "m_PersistentCalls": {
-                                    "m_Calls": []
-                                  },
-                                  "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-                                },
-                                "m_FontData": {
-                                  "m_Font": {
-                                    "m_FileID": 0,
-                                    "m_PathID": 0
-                                  },
-                                  "m_FontSize": 16,
-                                  "m_FontStyle": 0,
-                                  "m_BestFit": false,
-                                  "m_MinSize": 1,
-                                  "m_MaxSize": 40,
-                                  "m_Alignment": 4,
-                                  "m_AlignByGeometry": true,
-                                  "m_RichText": true,
-                                  "m_HorizontalOverflow": 1,
-                                  "m_VerticalOverflow": 1,
-                                  "m_LineSpacing": 1.25
-                                },
-                                "m_Text": "ユーザーの自己責任でバージョンを変更してください。 \nそれによって生じたマシンの不具合や、ユーザーの不利益に対して \n本Mod制作者(EEX-slime) 及びSpiderling Studioは一切の責任を負いません。"
-                              },
-                              "GameObjectRefs": {},
-                              "ComponentRefs": {},
-                              "SpriteRefs": {}
-                            },
-                            {
-                              "Type": "Besiege.UI.Bridge.LetterSpacing, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                              "Values": {
-                                "m_spacing": 0.0
-                              },
-                              "GameObjectRefs": {},
-                              "ComponentRefs": {},
-                              "SpriteRefs": {}
-                            },
-                            {
-                              "Type": "Besiege.UI.Behaviours.Translator, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                              "Values": {
-                                "TextComponent": {
-                                  "m_FileID": 10001,
-                                  "m_PathID": 0
-                                },
-                                "Key": "",
-                                "BuiltInLocalizationKey": 0
-                              },
-                              "GameObjectRefs": {},
-                              "ComponentRefs": {
-                                "10001": {
-                                  "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                  "Path": "Window/ScrollView/Viewport/Content/Contents/Text(Clone)",
+                                  "Path": "Window/View/Viewport/Content/Contents/Contents_Text",
                                   "Index": 0
                                 }
                               },
@@ -1558,257 +1257,14 @@
                           "Children": []
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "Name": "Scrollbar Horizontal",
-              "Active": false,
-              "TransformData": {
-                "localPosition": {
-                  "x": -300.0,
-                  "y": -360.0,
-                  "z": 0.0
-                },
-                "localRotation": {
-                  "w": 1.0,
-                  "x": 0.0,
-                  "y": 0.0,
-                  "z": 0.0,
-                  "eulerAngles": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                  }
-                },
-                "localScale": {
-                  "x": 1.0,
-                  "y": 1.0,
-                  "z": 1.0
-                },
-                "anchorMin": {
-                  "x": 0.0,
-                  "y": 0.0
-                },
-                "anchorMax": {
-                  "x": 1.0,
-                  "y": 0.0
-                },
-                "pivot": {
-                  "x": 0.0,
-                  "y": 0.0
-                },
-                "anchoredPosition": {
-                  "x": 0.0,
-                  "y": 0.0
-                },
-                "sizeDelta": {
-                  "x": 0.0,
-                  "y": 18.0
-                }
-              },
-              "ComponentData": [
-                {
-                  "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                  "Values": {
-                    "m_Material": {
-                      "m_FileID": 0,
-                      "m_PathID": 0
                     },
-                    "m_Color": {
-                      "r": 0.0313725508749485,
-                      "g": 0.0313725508749485,
-                      "b": 0.0470588244497776,
-                      "a": 0.82745099067687988
-                    },
-                    "m_RaycastTarget": true,
-                    "m_OnCullStateChanged": {
-                      "m_PersistentCalls": {
-                        "m_Calls": []
-                      },
-                      "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    },
-                    "m_Sprite": {
-                      "m_FileID": 0,
-                      "m_PathID": 0
-                    },
-                    "m_Type": 0,
-                    "m_PreserveAspect": false,
-                    "m_FillCenter": true,
-                    "m_FillMethod": 4,
-                    "m_FillAmount": 1.0,
-                    "m_FillClockwise": true,
-                    "m_FillOrigin": 0
-                  },
-                  "GameObjectRefs": {},
-                  "ComponentRefs": {},
-                  "SpriteRefs": {}
-                },
-                {
-                  "Type": "UnityEngine.UI.Scrollbar, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                  "Values": {
-                    "m_Navigation": {
-                      "m_Mode": 0,
-                      "m_SelectOnUp": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_SelectOnDown": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_SelectOnLeft": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_SelectOnRight": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      }
-                    },
-                    "m_Transition": 0,
-                    "m_Colors": {
-                      "m_NormalColor": {
-                        "r": 1.0,
-                        "g": 1.0,
-                        "b": 1.0,
-                        "a": 1.0
-                      },
-                      "m_HighlightedColor": {
-                        "r": 0.96078431606292725,
-                        "g": 0.96078431606292725,
-                        "b": 0.96078431606292725,
-                        "a": 1.0
-                      },
-                      "m_PressedColor": {
-                        "r": 0.78431373834609985,
-                        "g": 0.78431373834609985,
-                        "b": 0.78431373834609985,
-                        "a": 1.0
-                      },
-                      "m_DisabledColor": {
-                        "r": 0.78431373834609985,
-                        "g": 0.78431373834609985,
-                        "b": 0.78431373834609985,
-                        "a": 0.501960813999176
-                      },
-                      "m_ColorMultiplier": 1.0,
-                      "m_FadeDuration": 0.10000000149011612
-                    },
-                    "m_SpriteState": {
-                      "m_HighlightedSprite": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_PressedSprite": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_DisabledSprite": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      }
-                    },
-                    "m_AnimationTriggers": {
-                      "m_NormalTrigger": "Normal",
-                      "m_HighlightedTrigger": "Highlighted",
-                      "m_PressedTrigger": "Pressed",
-                      "m_DisabledTrigger": "Disabled"
-                    },
-                    "m_Interactable": true,
-                    "m_TargetGraphic": {
-                      "m_FileID": 10002,
-                      "m_PathID": 0
-                    },
-                    "m_HandleRect": {
-                      "m_FileID": 10001,
-                      "m_PathID": 0
-                    },
-                    "m_Direction": 0,
-                    "m_Value": 0.0,
-                    "m_Size": 1.0,
-                    "m_NumberOfSteps": 0,
-                    "m_OnValueChanged": {
-                      "m_PersistentCalls": {
-                        "m_Calls": []
-                      },
-                      "m_TypeName": "UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    }
-                  },
-                  "GameObjectRefs": {},
-                  "ComponentRefs": {
-                    "10001": {
-                      "Type": "UnityEngine.RectTransform, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                      "Path": "Window/ScrollView/Scrollbar Horizontal/Sliding Area/Handle",
-                      "Index": 0
-                    },
-                    "10002": {
-                      "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                      "Path": "Window/ScrollView/Scrollbar Horizontal/Sliding Area/Handle",
-                      "Index": 0
-                    }
-                  },
-                  "SpriteRefs": {}
-                }
-              ],
-              "Children": [
-                {
-                  "Name": "Sliding Area",
-                  "Active": true,
-                  "TransformData": {
-                    "localPosition": {
-                      "x": 300.0,
-                      "y": 9.0,
-                      "z": 0.0
-                    },
-                    "localRotation": {
-                      "w": 1.0,
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "eulerAngles": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                      }
-                    },
-                    "localScale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "anchorMin": {
-                      "x": 0.0,
-                      "y": 0.5
-                    },
-                    "anchorMax": {
-                      "x": 1.0,
-                      "y": 0.5
-                    },
-                    "pivot": {
-                      "x": 0.5,
-                      "y": 0.5
-                    },
-                    "anchoredPosition": {
-                      "x": 0.0,
-                      "y": 0.0
-                    },
-                    "sizeDelta": {
-                      "x": 0.0,
-                      "y": 0.0
-                    }
-                  },
-                  "ComponentData": [],
-                  "Children": [
                     {
-                      "Name": "Handle",
+                      "Name": "Footer",
                       "Active": true,
                       "TransformData": {
                         "localPosition": {
-                          "x": 0.0,
-                          "y": 0.0,
+                          "x": 300.0,
+                          "y": -360.0,
                           "z": 0.0
                         },
                         "localRotation": {
@@ -1833,11 +1289,11 @@
                         },
                         "anchorMax": {
                           "x": 1.0,
-                          "y": 1.0
+                          "y": 0.0
                         },
                         "pivot": {
                           "x": 0.5,
-                          "y": 0.5
+                          "y": 0.0
                         },
                         "anchoredPosition": {
                           "x": 0.0,
@@ -1845,377 +1301,1223 @@
                         },
                         "sizeDelta": {
                           "x": 0.0,
-                          "y": 18.0
+                          "y": 100.0
                         }
                       },
-                      "ComponentData": [
+                      "ComponentData": [],
+                      "Children": [
                         {
-                          "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                          "Values": {
-                            "m_Material": {
-                              "m_FileID": 0,
-                              "m_PathID": 0
+                          "Name": "Empty",
+                          "Active": true,
+                          "TransformData": {
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 80.0,
+                              "z": 0.0
                             },
-                            "m_Color": {
-                              "r": 1.0,
-                              "g": 1.0,
-                              "b": 1.0,
-                              "a": 0.63529413938522339
+                            "localRotation": {
+                              "w": 1.0,
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "eulerAngles": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                              }
                             },
-                            "m_RaycastTarget": true,
-                            "m_OnCullStateChanged": {
-                              "m_PersistentCalls": {
-                                "m_Calls": []
-                              },
-                              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
                             },
-                            "m_Sprite": {
-                              "m_FileID": 0,
-                              "m_PathID": 0
+                            "anchorMin": {
+                              "x": 0.5,
+                              "y": 1.0
                             },
-                            "m_Type": 1,
-                            "m_PreserveAspect": false,
-                            "m_FillCenter": true,
-                            "m_FillMethod": 4,
-                            "m_FillAmount": 1.0,
-                            "m_FillClockwise": true,
-                            "m_FillOrigin": 0
+                            "anchorMax": {
+                              "x": 0.5,
+                              "y": 1.0
+                            },
+                            "pivot": {
+                              "x": 0.5,
+                              "y": 0.5
+                            },
+                            "anchoredPosition": {
+                              "x": 0.0,
+                              "y": -20.0
+                            },
+                            "sizeDelta": {
+                              "x": 600.0,
+                              "y": 30.0
+                            }
                           },
-                          "GameObjectRefs": {},
-                          "ComponentRefs": {},
-                          "SpriteRefs": {}
-                        }
-                      ],
-                      "Children": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "Name": "Scrollbar Vertical",
-              "Active": false,
-              "TransformData": {
-                "localPosition": {
-                  "x": 300.0,
-                  "y": 0.0,
-                  "z": 0.0
-                },
-                "localRotation": {
-                  "w": 1.0,
-                  "x": 0.0,
-                  "y": 0.0,
-                  "z": 0.0,
-                  "eulerAngles": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                  }
-                },
-                "localScale": {
-                  "x": 1.0,
-                  "y": 1.0,
-                  "z": 1.0
-                },
-                "anchorMin": {
-                  "x": 1.0,
-                  "y": 0.0
-                },
-                "anchorMax": {
-                  "x": 1.0,
-                  "y": 1.0
-                },
-                "pivot": {
-                  "x": 1.0,
-                  "y": 1.0
-                },
-                "anchoredPosition": {
-                  "x": 0.0,
-                  "y": 0.0
-                },
-                "sizeDelta": {
-                  "x": 18.0,
-                  "y": 0.0
-                }
-              },
-              "ComponentData": [
-                {
-                  "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                  "Values": {
-                    "m_Material": {
-                      "m_FileID": 0,
-                      "m_PathID": 0
-                    },
-                    "m_Color": {
-                      "r": 0.0313725508749485,
-                      "g": 0.0313725508749485,
-                      "b": 0.0470588244497776,
-                      "a": 0.82745099067687988
-                    },
-                    "m_RaycastTarget": true,
-                    "m_OnCullStateChanged": {
-                      "m_PersistentCalls": {
-                        "m_Calls": []
-                      },
-                      "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    },
-                    "m_Sprite": {
-                      "m_FileID": 0,
-                      "m_PathID": 0
-                    },
-                    "m_Type": 0,
-                    "m_PreserveAspect": false,
-                    "m_FillCenter": true,
-                    "m_FillMethod": 4,
-                    "m_FillAmount": 1.0,
-                    "m_FillClockwise": true,
-                    "m_FillOrigin": 0
-                  },
-                  "GameObjectRefs": {},
-                  "ComponentRefs": {},
-                  "SpriteRefs": {}
-                },
-                {
-                  "Type": "UnityEngine.UI.Scrollbar, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                  "Values": {
-                    "m_Navigation": {
-                      "m_Mode": 0,
-                      "m_SelectOnUp": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_SelectOnDown": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_SelectOnLeft": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_SelectOnRight": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      }
-                    },
-                    "m_Transition": 0,
-                    "m_Colors": {
-                      "m_NormalColor": {
-                        "r": 1.0,
-                        "g": 1.0,
-                        "b": 1.0,
-                        "a": 1.0
-                      },
-                      "m_HighlightedColor": {
-                        "r": 0.96078431606292725,
-                        "g": 0.96078431606292725,
-                        "b": 0.96078431606292725,
-                        "a": 1.0
-                      },
-                      "m_PressedColor": {
-                        "r": 0.78431373834609985,
-                        "g": 0.78431373834609985,
-                        "b": 0.78431373834609985,
-                        "a": 1.0
-                      },
-                      "m_DisabledColor": {
-                        "r": 0.78431373834609985,
-                        "g": 0.78431373834609985,
-                        "b": 0.78431373834609985,
-                        "a": 0.501960813999176
-                      },
-                      "m_ColorMultiplier": 1.0,
-                      "m_FadeDuration": 0.10000000149011612
-                    },
-                    "m_SpriteState": {
-                      "m_HighlightedSprite": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_PressedSprite": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      },
-                      "m_DisabledSprite": {
-                        "m_FileID": 0,
-                        "m_PathID": 0
-                      }
-                    },
-                    "m_AnimationTriggers": {
-                      "m_NormalTrigger": "Normal",
-                      "m_HighlightedTrigger": "Highlighted",
-                      "m_PressedTrigger": "Pressed",
-                      "m_DisabledTrigger": "Disabled"
-                    },
-                    "m_Interactable": true,
-                    "m_TargetGraphic": {
-                      "m_FileID": 10002,
-                      "m_PathID": 0
-                    },
-                    "m_HandleRect": {
-                      "m_FileID": 10001,
-                      "m_PathID": 0
-                    },
-                    "m_Direction": 2,
-                    "m_Value": 0.0,
-                    "m_Size": 1.0,
-                    "m_NumberOfSteps": 0,
-                    "m_OnValueChanged": {
-                      "m_PersistentCalls": {
-                        "m_Calls": []
-                      },
-                      "m_TypeName": "UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    }
-                  },
-                  "GameObjectRefs": {},
-                  "ComponentRefs": {
-                    "10001": {
-                      "Type": "UnityEngine.RectTransform, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                      "Path": "Window/ScrollView/Scrollbar Vertical/Sliding Area/Handle",
-                      "Index": 0
-                    },
-                    "10002": {
-                      "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                      "Path": "Window/ScrollView/Scrollbar Vertical/Sliding Area/Handle",
-                      "Index": 0
-                    }
-                  },
-                  "SpriteRefs": {}
-                }
-              ],
-              "Children": [
-                {
-                  "Name": "Sliding Area",
-                  "Active": true,
-                  "TransformData": {
-                    "localPosition": {
-                      "x": -9.0,
-                      "y": -180.0,
-                      "z": 0.0
-                    },
-                    "localRotation": {
-                      "w": 1.0,
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "eulerAngles": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                      }
-                    },
-                    "localScale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "anchorMin": {
-                      "x": 0.5,
-                      "y": 0.0
-                    },
-                    "anchorMax": {
-                      "x": 0.5,
-                      "y": 1.0
-                    },
-                    "pivot": {
-                      "x": 0.5,
-                      "y": 0.5
-                    },
-                    "anchoredPosition": {
-                      "x": 0.0,
-                      "y": 0.0
-                    },
-                    "sizeDelta": {
-                      "x": 0.0,
-                      "y": 0.0
-                    }
-                  },
-                  "ComponentData": [],
-                  "Children": [
-                    {
-                      "Name": "Handle",
-                      "Active": true,
-                      "TransformData": {
-                        "localPosition": {
-                          "x": 0.0,
-                          "y": 0.0,
-                          "z": 0.0
+                          "ComponentData": [],
+                          "Children": [
+                            {
+                              "Name": "HideWarningToggle_Text",
+                              "Active": true,
+                              "TransformData": {
+                                "localPosition": {
+                                  "x": 20.0,
+                                  "y": 0.0,
+                                  "z": 0.0
+                                },
+                                "localRotation": {
+                                  "w": 1.0,
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "eulerAngles": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                  }
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "anchorMin": {
+                                  "x": 0.0,
+                                  "y": 1.0
+                                },
+                                "anchorMax": {
+                                  "x": 0.0,
+                                  "y": 1.0
+                                },
+                                "pivot": {
+                                  "x": 0.5,
+                                  "y": 0.5
+                                },
+                                "anchoredPosition": {
+                                  "x": 320.0,
+                                  "y": -15.0
+                                },
+                                "sizeDelta": {
+                                  "x": 270.0,
+                                  "y": 30.0
+                                }
+                              },
+                              "ComponentData": [
+                                {
+                                  "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "m_Material": {
+                                      "m_FileID": 0,
+                                      "m_PathID": 0
+                                    },
+                                    "m_Color": {
+                                      "r": 1.0,
+                                      "g": 1.0,
+                                      "b": 1.0,
+                                      "a": 1.0
+                                    },
+                                    "m_RaycastTarget": false,
+                                    "m_OnCullStateChanged": {
+                                      "m_PersistentCalls": {
+                                        "m_Calls": []
+                                      },
+                                      "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                    },
+                                    "m_FontData": {
+                                      "m_Font": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_FontSize": 16,
+                                      "m_FontStyle": 0,
+                                      "m_BestFit": false,
+                                      "m_MinSize": 1,
+                                      "m_MaxSize": 40,
+                                      "m_Alignment": 3,
+                                      "m_AlignByGeometry": true,
+                                      "m_RichText": true,
+                                      "m_HorizontalOverflow": 1,
+                                      "m_VerticalOverflow": 1,
+                                      "m_LineSpacing": 1.0
+                                    },
+                                    "m_Text": "内容を理解し、今後警告を出さない"
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {},
+                                  "SpriteRefs": {}
+                                },
+                                {
+                                  "Type": "Besiege.UI.Bridge.LetterSpacing, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "m_spacing": 0.0
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {},
+                                  "SpriteRefs": {}
+                                },
+                                {
+                                  "Type": "Besiege.UI.Behaviours.Translator, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "TextComponent": {
+                                      "m_FileID": 10001,
+                                      "m_PathID": 0
+                                    },
+                                    "Key": "",
+                                    "BuiltInLocalizationKey": 0
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {
+                                    "10001": {
+                                      "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Path": "Window/View/Viewport/Content/Footer/Empty/HideWarningToggle_Text",
+                                      "Index": 0
+                                    }
+                                  },
+                                  "SpriteRefs": {}
+                                }
+                              ],
+                              "Children": []
+                            },
+                            {
+                              "Name": "HideWarningToggleButton",
+                              "Active": true,
+                              "TransformData": {
+                                "localPosition": {
+                                  "x": -132.0,
+                                  "y": -1.0,
+                                  "z": 0.0
+                                },
+                                "localRotation": {
+                                  "w": 1.0,
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "eulerAngles": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                  }
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "anchorMin": {
+                                  "x": 0.5,
+                                  "y": 0.5
+                                },
+                                "anchorMax": {
+                                  "x": 0.5,
+                                  "y": 0.5
+                                },
+                                "pivot": {
+                                  "x": 0.5,
+                                  "y": 0.5
+                                },
+                                "anchoredPosition": {
+                                  "x": -132.0,
+                                  "y": -1.0
+                                },
+                                "sizeDelta": {
+                                  "x": 23.0,
+                                  "y": 23.0
+                                }
+                              },
+                              "ComponentData": [
+                                {
+                                  "Type": "UnityEngine.UI.Toggle, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "m_Navigation": {
+                                      "m_Mode": 0,
+                                      "m_SelectOnUp": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnDown": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnLeft": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnRight": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      }
+                                    },
+                                    "m_Transition": 0,
+                                    "m_Colors": {
+                                      "m_NormalColor": {
+                                        "r": 0.015686275437474251,
+                                        "g": 0.015686275437474251,
+                                        "b": 0.0235294122248888,
+                                        "a": 0.20000000298023224
+                                      },
+                                      "m_HighlightedColor": {
+                                        "r": 0.015686275437474251,
+                                        "g": 0.015686275437474251,
+                                        "b": 0.0235294122248888,
+                                        "a": 0.20000000298023224
+                                      },
+                                      "m_PressedColor": {
+                                        "r": 0.45882353186607361,
+                                        "g": 0.066666670143604279,
+                                        "b": 0.14509804546833038,
+                                        "a": 1.0
+                                      },
+                                      "m_DisabledColor": {
+                                        "r": 0.015686275437474251,
+                                        "g": 0.015686275437474251,
+                                        "b": 0.0235294122248888,
+                                        "a": 0.20000000298023224
+                                      },
+                                      "m_ColorMultiplier": 1.0,
+                                      "m_FadeDuration": 0.0
+                                    },
+                                    "m_SpriteState": {
+                                      "m_HighlightedSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_PressedSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_DisabledSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      }
+                                    },
+                                    "m_AnimationTriggers": {
+                                      "m_NormalTrigger": "Normal",
+                                      "m_HighlightedTrigger": "Highlighted",
+                                      "m_PressedTrigger": "Pressed",
+                                      "m_DisabledTrigger": "Disabled"
+                                    },
+                                    "m_Interactable": true,
+                                    "m_TargetGraphic": {
+                                      "m_FileID": 0,
+                                      "m_PathID": 0
+                                    },
+                                    "toggleTransition": 0,
+                                    "graphic": {
+                                      "m_FileID": 10001,
+                                      "m_PathID": 0
+                                    },
+                                    "m_Group": {
+                                      "m_FileID": 0,
+                                      "m_PathID": 0
+                                    },
+                                    "onValueChanged": {
+                                      "m_PersistentCalls": {
+                                        "m_Calls": []
+                                      },
+                                      "m_TypeName": "UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                    },
+                                    "m_IsOn": false
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {
+                                    "10001": {
+                                      "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Path": "Window/View/Viewport/Content/Footer/Empty/HideWarningToggleButton/Checkmark",
+                                      "Index": 0
+                                    }
+                                  },
+                                  "SpriteRefs": {}
+                                }
+                              ],
+                              "Children": [
+                                {
+                                  "Name": "Background",
+                                  "Active": true,
+                                  "TransformData": {
+                                    "localPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0
+                                    },
+                                    "localRotation": {
+                                      "w": 1.0,
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0,
+                                      "eulerAngles": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                      }
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "anchorMin": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    },
+                                    "anchorMax": {
+                                      "x": 1.0,
+                                      "y": 1.0
+                                    },
+                                    "pivot": {
+                                      "x": 0.5,
+                                      "y": 0.5
+                                    },
+                                    "anchoredPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    },
+                                    "sizeDelta": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    }
+                                  },
+                                  "ComponentData": [
+                                    {
+                                      "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Values": {
+                                        "m_Material": {
+                                          "m_FileID": 0,
+                                          "m_PathID": 0
+                                        },
+                                        "m_Color": {
+                                          "r": 0.030999999493360519,
+                                          "g": 0.0430000014603138,
+                                          "b": 0.054999999701976776,
+                                          "a": 0.89999997615814209
+                                        },
+                                        "m_RaycastTarget": true,
+                                        "m_OnCullStateChanged": {
+                                          "m_PersistentCalls": {
+                                            "m_Calls": []
+                                          },
+                                          "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                        },
+                                        "m_Sprite": {
+                                          "m_FileID": 0,
+                                          "m_PathID": 0
+                                        },
+                                        "m_Type": 0,
+                                        "m_PreserveAspect": true,
+                                        "m_FillCenter": true,
+                                        "m_FillMethod": 4,
+                                        "m_FillAmount": 1.0,
+                                        "m_FillClockwise": true,
+                                        "m_FillOrigin": 0
+                                      },
+                                      "GameObjectRefs": {},
+                                      "ComponentRefs": {},
+                                      "SpriteRefs": {}
+                                    }
+                                  ],
+                                  "Children": []
+                                },
+                                {
+                                  "Name": "Checkmark",
+                                  "Active": true,
+                                  "TransformData": {
+                                    "localPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0
+                                    },
+                                    "localRotation": {
+                                      "w": 1.0,
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0,
+                                      "eulerAngles": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                      }
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "anchorMin": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    },
+                                    "anchorMax": {
+                                      "x": 1.0,
+                                      "y": 1.0
+                                    },
+                                    "pivot": {
+                                      "x": 0.5,
+                                      "y": 0.5
+                                    },
+                                    "anchoredPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    },
+                                    "sizeDelta": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    }
+                                  },
+                                  "ComponentData": [
+                                    {
+                                      "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Values": {
+                                        "m_Material": {
+                                          "m_FileID": 0,
+                                          "m_PathID": 0
+                                        },
+                                        "m_Color": {
+                                          "r": 0.91764706373214722,
+                                          "g": 0.13333334028720856,
+                                          "b": 0.29019609093666077,
+                                          "a": 1.0
+                                        },
+                                        "m_RaycastTarget": false,
+                                        "m_OnCullStateChanged": {
+                                          "m_PersistentCalls": {
+                                            "m_Calls": []
+                                          },
+                                          "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                        },
+                                        "m_Sprite": {
+                                          "m_FileID": 0,
+                                          "m_PathID": 0
+                                        },
+                                        "m_Type": 0,
+                                        "m_PreserveAspect": false,
+                                        "m_FillCenter": true,
+                                        "m_FillMethod": 4,
+                                        "m_FillAmount": 1.0,
+                                        "m_FillClockwise": true,
+                                        "m_FillOrigin": 0
+                                      },
+                                      "GameObjectRefs": {},
+                                      "ComponentRefs": {},
+                                      "SpriteRefs": {}
+                                    }
+                                  ],
+                                  "Children": []
+                                }
+                              ]
+                            }
+                          ]
                         },
-                        "localRotation": {
-                          "w": 1.0,
-                          "x": 0.0,
-                          "y": 0.0,
-                          "z": 0.0,
-                          "eulerAngles": {
-                            "x": 0.0,
-                            "y": 0.0,
-                            "z": 0.0
-                          }
-                        },
-                        "localScale": {
-                          "x": 1.0,
-                          "y": 1.0,
-                          "z": 1.0
-                        },
-                        "anchorMin": {
-                          "x": 0.0,
-                          "y": 0.0
-                        },
-                        "anchorMax": {
-                          "x": 1.0,
-                          "y": 1.0
-                        },
-                        "pivot": {
-                          "x": 0.5,
-                          "y": 0.5
-                        },
-                        "anchoredPosition": {
-                          "x": -1.937151E-07,
-                          "y": 0.0
-                        },
-                        "sizeDelta": {
-                          "x": 18.0,
-                          "y": 0.0
-                        }
-                      },
-                      "ComponentData": [
                         {
-                          "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                          "Values": {
-                            "m_Material": {
-                              "m_FileID": 0,
-                              "m_PathID": 0
+                          "Name": "Buttons",
+                          "Active": true,
+                          "TransformData": {
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 5.0,
+                              "z": 0.0
                             },
-                            "m_Color": {
-                              "r": 1.0,
-                              "g": 1.0,
-                              "b": 1.0,
-                              "a": 0.63529413938522339
+                            "localRotation": {
+                              "w": 1.0,
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "eulerAngles": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                              }
                             },
-                            "m_RaycastTarget": true,
-                            "m_OnCullStateChanged": {
-                              "m_PersistentCalls": {
-                                "m_Calls": []
-                              },
-                              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
                             },
-                            "m_Sprite": {
-                              "m_FileID": 0,
-                              "m_PathID": 0
+                            "anchorMin": {
+                              "x": 0.0,
+                              "y": 0.0
                             },
-                            "m_Type": 1,
-                            "m_PreserveAspect": false,
-                            "m_FillCenter": true,
-                            "m_FillMethod": 4,
-                            "m_FillAmount": 1.0,
-                            "m_FillClockwise": true,
-                            "m_FillOrigin": 0
+                            "anchorMax": {
+                              "x": 1.0,
+                              "y": 1.0
+                            },
+                            "pivot": {
+                              "x": 0.5,
+                              "y": 0.0
+                            },
+                            "anchoredPosition": {
+                              "x": 0.0,
+                              "y": 5.0
+                            },
+                            "sizeDelta": {
+                              "x": 0.0,
+                              "y": -35.0
+                            }
                           },
-                          "GameObjectRefs": {},
-                          "ComponentRefs": {},
-                          "SpriteRefs": {}
+                          "ComponentData": [
+                            {
+                              "Type": "UnityEngine.UI.HorizontalLayoutGroup, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                              "Values": {
+                                "m_Padding": {
+                                  "m_Left": 40,
+                                  "m_Right": 40,
+                                  "m_Top": 10,
+                                  "m_Bottom": 10
+                                },
+                                "m_ChildAlignment": 0,
+                                "m_Spacing": 20.0,
+                                "m_ChildForceExpandWidth": true,
+                                "m_ChildForceExpandHeight": true
+                              },
+                              "GameObjectRefs": {},
+                              "ComponentRefs": {},
+                              "SpriteRefs": {}
+                            }
+                          ],
+                          "Children": [
+                            {
+                              "Name": "DownVerButton",
+                              "Active": true,
+                              "TransformData": {
+                                "localPosition": {
+                                  "x": -135.0,
+                                  "y": 32.5,
+                                  "z": 0.0
+                                },
+                                "localRotation": {
+                                  "w": 1.0,
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "eulerAngles": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                  }
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "anchorMin": {
+                                  "x": 0.0,
+                                  "y": 1.0
+                                },
+                                "anchorMax": {
+                                  "x": 0.0,
+                                  "y": 1.0
+                                },
+                                "pivot": {
+                                  "x": 0.5,
+                                  "y": 0.5
+                                },
+                                "anchoredPosition": {
+                                  "x": 165.0,
+                                  "y": -32.5
+                                },
+                                "sizeDelta": {
+                                  "x": 250.0,
+                                  "y": 45.0
+                                }
+                              },
+                              "ComponentData": [
+                                {
+                                  "Type": "UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "m_Navigation": {
+                                      "m_Mode": 3,
+                                      "m_SelectOnUp": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnDown": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnLeft": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnRight": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      }
+                                    },
+                                    "m_Transition": 0,
+                                    "m_Colors": {
+                                      "m_NormalColor": {
+                                        "r": 1.0,
+                                        "g": 1.0,
+                                        "b": 1.0,
+                                        "a": 1.0
+                                      },
+                                      "m_HighlightedColor": {
+                                        "r": 0.96078431606292725,
+                                        "g": 0.96078431606292725,
+                                        "b": 0.96078431606292725,
+                                        "a": 1.0
+                                      },
+                                      "m_PressedColor": {
+                                        "r": 0.78431373834609985,
+                                        "g": 0.78431373834609985,
+                                        "b": 0.78431373834609985,
+                                        "a": 1.0
+                                      },
+                                      "m_DisabledColor": {
+                                        "r": 0.78431373834609985,
+                                        "g": 0.78431373834609985,
+                                        "b": 0.78431373834609985,
+                                        "a": 0.501960813999176
+                                      },
+                                      "m_ColorMultiplier": 1.0,
+                                      "m_FadeDuration": 0.10000000149011612
+                                    },
+                                    "m_SpriteState": {
+                                      "m_HighlightedSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_PressedSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_DisabledSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      }
+                                    },
+                                    "m_AnimationTriggers": {
+                                      "m_NormalTrigger": "Normal",
+                                      "m_HighlightedTrigger": "Highlighted",
+                                      "m_PressedTrigger": "Pressed",
+                                      "m_DisabledTrigger": "Disabled"
+                                    },
+                                    "m_Interactable": true,
+                                    "m_TargetGraphic": {
+                                      "m_FileID": 10001,
+                                      "m_PathID": 0
+                                    },
+                                    "m_OnClick": {
+                                      "m_PersistentCalls": {
+                                        "m_Calls": []
+                                      },
+                                      "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                    }
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {
+                                    "10001": {
+                                      "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Path": "Window/View/Viewport/Content/Footer/Buttons/DownVerButton",
+                                      "Index": 0
+                                    }
+                                  },
+                                  "SpriteRefs": {}
+                                },
+                                {
+                                  "Type": "Besiege.UI.Bridge.ScaleAnimation, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "Target": {
+                                      "m_FileID": 10001,
+                                      "m_PathID": 0
+                                    }
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {
+                                    "10001": {
+                                      "Type": "UnityEngine.RectTransform, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Path": "Window/View/Viewport/Content/Footer/Buttons/DownVerButton/DownVerButton_Text",
+                                      "Index": 0
+                                    }
+                                  },
+                                  "SpriteRefs": {}
+                                },
+                                {
+                                  "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "m_Material": {
+                                      "m_FileID": 0,
+                                      "m_PathID": 0
+                                    },
+                                    "m_Color": {
+                                      "r": 0.40000000596046448,
+                                      "g": 0.40000000596046448,
+                                      "b": 0.40000000596046448,
+                                      "a": 8.0
+                                    },
+                                    "m_RaycastTarget": true,
+                                    "m_OnCullStateChanged": {
+                                      "m_PersistentCalls": {
+                                        "m_Calls": []
+                                      },
+                                      "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                    },
+                                    "m_Sprite": {
+                                      "m_FileID": 20001,
+                                      "m_PathID": 0
+                                    },
+                                    "m_Type": 1,
+                                    "m_PreserveAspect": false,
+                                    "m_FillCenter": true,
+                                    "m_FillMethod": 4,
+                                    "m_FillAmount": 1.0,
+                                    "m_FillClockwise": true,
+                                    "m_FillOrigin": 0
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {},
+                                  "SpriteRefs": {
+                                    "20001": "UIFactory3::InputFieldBackground"
+                                  }
+                                }
+                              ],
+                              "Children": [
+                                {
+                                  "Name": "DownVerButton_Text",
+                                  "Active": true,
+                                  "TransformData": {
+                                    "localPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0
+                                    },
+                                    "localRotation": {
+                                      "w": 1.0,
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0,
+                                      "eulerAngles": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                      }
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "anchorMin": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    },
+                                    "anchorMax": {
+                                      "x": 1.0,
+                                      "y": 1.0
+                                    },
+                                    "pivot": {
+                                      "x": 0.5,
+                                      "y": 0.5
+                                    },
+                                    "anchoredPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    },
+                                    "sizeDelta": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    }
+                                  },
+                                  "ComponentData": [
+                                    {
+                                      "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Values": {
+                                        "m_Material": {
+                                          "m_FileID": 0,
+                                          "m_PathID": 0
+                                        },
+                                        "m_Color": {
+                                          "r": 1.0,
+                                          "g": 1.0,
+                                          "b": 1.0,
+                                          "a": 1.0
+                                        },
+                                        "m_RaycastTarget": true,
+                                        "m_OnCullStateChanged": {
+                                          "m_PersistentCalls": {
+                                            "m_Calls": []
+                                          },
+                                          "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                        },
+                                        "m_FontData": {
+                                          "m_Font": {
+                                            "m_FileID": 0,
+                                            "m_PathID": 0
+                                          },
+                                          "m_FontSize": 16,
+                                          "m_FontStyle": 0,
+                                          "m_BestFit": false,
+                                          "m_MinSize": 1,
+                                          "m_MaxSize": 40,
+                                          "m_Alignment": 4,
+                                          "m_AlignByGeometry": true,
+                                          "m_RichText": true,
+                                          "m_HorizontalOverflow": 1,
+                                          "m_VerticalOverflow": 1,
+                                          "m_LineSpacing": 1.0
+                                        },
+                                        "m_Text": "バージョンを戻す"
+                                      },
+                                      "GameObjectRefs": {},
+                                      "ComponentRefs": {},
+                                      "SpriteRefs": {}
+                                    },
+                                    {
+                                      "Type": "Besiege.UI.Bridge.LetterSpacing, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Values": {
+                                        "m_spacing": 0.0
+                                      },
+                                      "GameObjectRefs": {},
+                                      "ComponentRefs": {},
+                                      "SpriteRefs": {}
+                                    },
+                                    {
+                                      "Type": "Besiege.UI.Behaviours.Translator, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Values": {
+                                        "TextComponent": {
+                                          "m_FileID": 10001,
+                                          "m_PathID": 0
+                                        },
+                                        "Key": "",
+                                        "BuiltInLocalizationKey": 0
+                                      },
+                                      "GameObjectRefs": {},
+                                      "ComponentRefs": {
+                                        "10001": {
+                                          "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                          "Path": "Window/View/Viewport/Content/Footer/Buttons/DownVerButton/DownVerButton_Text",
+                                          "Index": 0
+                                        }
+                                      },
+                                      "SpriteRefs": {}
+                                    }
+                                  ],
+                                  "Children": []
+                                }
+                              ]
+                            },
+                            {
+                              "Name": "UpVerButton",
+                              "Active": true,
+                              "TransformData": {
+                                "localPosition": {
+                                  "x": 135.0,
+                                  "y": 32.5,
+                                  "z": 0.0
+                                },
+                                "localRotation": {
+                                  "w": 1.0,
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "eulerAngles": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                  }
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "anchorMin": {
+                                  "x": 0.0,
+                                  "y": 1.0
+                                },
+                                "anchorMax": {
+                                  "x": 0.0,
+                                  "y": 1.0
+                                },
+                                "pivot": {
+                                  "x": 0.5,
+                                  "y": 0.5
+                                },
+                                "anchoredPosition": {
+                                  "x": 435.0,
+                                  "y": -32.5
+                                },
+                                "sizeDelta": {
+                                  "x": 250.0,
+                                  "y": 45.0
+                                }
+                              },
+                              "ComponentData": [
+                                {
+                                  "Type": "UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "m_Navigation": {
+                                      "m_Mode": 3,
+                                      "m_SelectOnUp": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnDown": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnLeft": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_SelectOnRight": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      }
+                                    },
+                                    "m_Transition": 0,
+                                    "m_Colors": {
+                                      "m_NormalColor": {
+                                        "r": 1.0,
+                                        "g": 1.0,
+                                        "b": 1.0,
+                                        "a": 1.0
+                                      },
+                                      "m_HighlightedColor": {
+                                        "r": 0.96078431606292725,
+                                        "g": 0.96078431606292725,
+                                        "b": 0.96078431606292725,
+                                        "a": 1.0
+                                      },
+                                      "m_PressedColor": {
+                                        "r": 0.78431373834609985,
+                                        "g": 0.78431373834609985,
+                                        "b": 0.78431373834609985,
+                                        "a": 1.0
+                                      },
+                                      "m_DisabledColor": {
+                                        "r": 0.78431373834609985,
+                                        "g": 0.78431373834609985,
+                                        "b": 0.78431373834609985,
+                                        "a": 0.501960813999176
+                                      },
+                                      "m_ColorMultiplier": 1.0,
+                                      "m_FadeDuration": 0.10000000149011612
+                                    },
+                                    "m_SpriteState": {
+                                      "m_HighlightedSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_PressedSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      },
+                                      "m_DisabledSprite": {
+                                        "m_FileID": 0,
+                                        "m_PathID": 0
+                                      }
+                                    },
+                                    "m_AnimationTriggers": {
+                                      "m_NormalTrigger": "Normal",
+                                      "m_HighlightedTrigger": "Highlighted",
+                                      "m_PressedTrigger": "Pressed",
+                                      "m_DisabledTrigger": "Disabled"
+                                    },
+                                    "m_Interactable": true,
+                                    "m_TargetGraphic": {
+                                      "m_FileID": 10001,
+                                      "m_PathID": 0
+                                    },
+                                    "m_OnClick": {
+                                      "m_PersistentCalls": {
+                                        "m_Calls": []
+                                      },
+                                      "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                    }
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {
+                                    "10001": {
+                                      "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Path": "Window/View/Viewport/Content/Footer/Buttons/UpVerButton",
+                                      "Index": 0
+                                    }
+                                  },
+                                  "SpriteRefs": {}
+                                },
+                                {
+                                  "Type": "Besiege.UI.Bridge.ScaleAnimation, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "Target": {
+                                      "m_FileID": 10001,
+                                      "m_PathID": 0
+                                    }
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {
+                                    "10001": {
+                                      "Type": "UnityEngine.RectTransform, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Path": "Window/View/Viewport/Content/Footer/Buttons/UpVerButton/UpVerButton_Text",
+                                      "Index": 0
+                                    }
+                                  },
+                                  "SpriteRefs": {}
+                                },
+                                {
+                                  "Type": "UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                  "Values": {
+                                    "m_Material": {
+                                      "m_FileID": 0,
+                                      "m_PathID": 0
+                                    },
+                                    "m_Color": {
+                                      "r": 0.92000001668930054,
+                                      "g": 0.12999999523162842,
+                                      "b": 0.28999999165534973,
+                                      "a": 1.0
+                                    },
+                                    "m_RaycastTarget": true,
+                                    "m_OnCullStateChanged": {
+                                      "m_PersistentCalls": {
+                                        "m_Calls": []
+                                      },
+                                      "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                    },
+                                    "m_Sprite": {
+                                      "m_FileID": 20001,
+                                      "m_PathID": 0
+                                    },
+                                    "m_Type": 1,
+                                    "m_PreserveAspect": false,
+                                    "m_FillCenter": true,
+                                    "m_FillMethod": 4,
+                                    "m_FillAmount": 1.0,
+                                    "m_FillClockwise": true,
+                                    "m_FillOrigin": 0
+                                  },
+                                  "GameObjectRefs": {},
+                                  "ComponentRefs": {},
+                                  "SpriteRefs": {
+                                    "20001": "UIFactory3::InputFieldBackground"
+                                  }
+                                }
+                              ],
+                              "Children": [
+                                {
+                                  "Name": "UpVerButton_Text",
+                                  "Active": true,
+                                  "TransformData": {
+                                    "localPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0
+                                    },
+                                    "localRotation": {
+                                      "w": 1.0,
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0,
+                                      "eulerAngles": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                      }
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "anchorMin": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    },
+                                    "anchorMax": {
+                                      "x": 1.0,
+                                      "y": 1.0
+                                    },
+                                    "pivot": {
+                                      "x": 0.5,
+                                      "y": 0.5
+                                    },
+                                    "anchoredPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    },
+                                    "sizeDelta": {
+                                      "x": 0.0,
+                                      "y": 0.0
+                                    }
+                                  },
+                                  "ComponentData": [
+                                    {
+                                      "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Values": {
+                                        "m_Material": {
+                                          "m_FileID": 0,
+                                          "m_PathID": 0
+                                        },
+                                        "m_Color": {
+                                          "r": 1.0,
+                                          "g": 1.0,
+                                          "b": 1.0,
+                                          "a": 1.0
+                                        },
+                                        "m_RaycastTarget": true,
+                                        "m_OnCullStateChanged": {
+                                          "m_PersistentCalls": {
+                                            "m_Calls": []
+                                          },
+                                          "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                        },
+                                        "m_FontData": {
+                                          "m_Font": {
+                                            "m_FileID": 0,
+                                            "m_PathID": 0
+                                          },
+                                          "m_FontSize": 16,
+                                          "m_FontStyle": 0,
+                                          "m_BestFit": false,
+                                          "m_MinSize": 1,
+                                          "m_MaxSize": 40,
+                                          "m_Alignment": 4,
+                                          "m_AlignByGeometry": true,
+                                          "m_RichText": true,
+                                          "m_HorizontalOverflow": 1,
+                                          "m_VerticalOverflow": 1,
+                                          "m_LineSpacing": 1.0
+                                        },
+                                        "m_Text": "バージョンを最新にする"
+                                      },
+                                      "GameObjectRefs": {},
+                                      "ComponentRefs": {},
+                                      "SpriteRefs": {}
+                                    },
+                                    {
+                                      "Type": "Besiege.UI.Bridge.LetterSpacing, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Values": {
+                                        "m_spacing": 0.0
+                                      },
+                                      "GameObjectRefs": {},
+                                      "ComponentRefs": {},
+                                      "SpriteRefs": {}
+                                    },
+                                    {
+                                      "Type": "Besiege.UI.Behaviours.Translator, Besiege.UI.Bridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                      "Values": {
+                                        "TextComponent": {
+                                          "m_FileID": 10001,
+                                          "m_PathID": 0
+                                        },
+                                        "Key": "",
+                                        "BuiltInLocalizationKey": 0
+                                      },
+                                      "GameObjectRefs": {},
+                                      "ComponentRefs": {
+                                        "10001": {
+                                          "Type": "UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                          "Path": "Window/View/Viewport/Content/Footer/Buttons/UpVerButton/UpVerButton_Text",
+                                          "Index": 0
+                                        }
+                                      },
+                                      "SpriteRefs": {}
+                                    }
+                                  ],
+                                  "Children": []
+                                }
+                              ]
+                            }
+                          ]
                         }
-                      ],
-                      "Children": []
+                      ]
                     }
                   ]
                 }

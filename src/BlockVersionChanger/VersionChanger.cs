@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Modding;
+using Besiege.UI.Extensions;
+using Besiege.UI.Serialization;
+using UnityEngine.UI;
+using InternalModding.Blocks;
 
 
 namespace BlockVersionChanger
@@ -11,10 +16,15 @@ namespace BlockVersionChanger
         //UI表示用のテキストリスト
         public static readonly List<String> VersionList = new List<string>() { "BlockVer 0", "BlockVer 1" };
         //バージョン変更用のUI
-        public MMenu VersionMenu; 
+        public MMenu VersionMenu;
 
+        private GameObject WarningUI;//バージョン変更警告UI
+        private GameObject BlockMapperObj;
         private BlockBehaviour targetComponent = null; //versionの入っているコンポーネント
         private BlockType blockType; //ブロックの名前
+        private Project project;
+        //flag
+        private bool isValueChangedBlocked = false; //一時的にversionメニューのハンドラーブロック
 
 
         void Start()
@@ -27,6 +37,16 @@ namespace BlockVersionChanger
             }
         }
 
+        void Update()
+        {
+            if(WarningUI && !BlockMapperObj){
+                DestroyUI();
+            }
+            if(targetComponent.isSimulating){
+                DestroyUI();
+            }
+        }
+
 
         /// <summary>
         /// 初期化関数
@@ -36,7 +56,7 @@ namespace BlockVersionChanger
         public void InitializeComponent(BlockBehaviour component, BlockType type)
         {
             targetComponent = component;
-            blockType = type; 
+            blockType = type;
         }
 
 
@@ -85,7 +105,7 @@ namespace BlockVersionChanger
                         }
                     }
                     return 0;
-                
+
                 default:
                     Debug.LogError("[BlockVersionChanger] 未対応のブロックタイプです");
                     return 0;
@@ -102,7 +122,7 @@ namespace BlockVersionChanger
             switch (blockType)
             {
                 case BlockType.Bomb:
-                ((ExplodeOnCollideBlock)targetComponent).version = newVersion;
+                    ((ExplodeOnCollideBlock)targetComponent).version = newVersion;
                     break;
                 case BlockType.Grenade:
                     ((ControllableBomb)targetComponent).version = newVersion;
@@ -130,10 +150,10 @@ namespace BlockVersionChanger
                     SetVersionFroced(newVersion);
                     break;
                 default:
-                Debug.LogError("[BlockVersionChanger] 未対応のブロックタイプです");
+                    Debug.LogError("[BlockVersionChanger] 未対応のブロックタイプです");
                     break;
             }
-        } 
+        }
 
         /// <summary>
         /// 強制バージョン変更
@@ -156,13 +176,59 @@ namespace BlockVersionChanger
             machine.isLoadingInfo = true; //マシン情報更新中
             machine.RemoveBlock(targetComponent); //元のブロックを削除
 
-            if(!machine.AddBlock(blockInfo, out blockBehaviour)) //バージョンを書き換えたブロックを設置
+            if (!machine.AddBlock(blockInfo, out blockBehaviour)) //バージョンを書き換えたブロックを設置
             {
                 Debug.LogError("[BlockVersionChanger] ブロックコピーに失敗した！");
             }
             machine.isLoadingInfo = false;//マシン情報更新中
         }
 
+        private void SetupWarningUI()
+        {
+            if(BlockMapperObj = GameObject.Find("BlockMapper - " + blockType.ToString()))
+            {
+                WarningUI = Instantiate(Mod.UIPrefab_WarningVersionDown);
+                WarningUI.name = "WarningVersionDown - " + blockType.ToString();
+                WarningUI.transform.SetParent(HierarchyUtils.FindObject("Canvas"));
+                WarningUI.transform.localPosition = new Vector3(0f, 0f, 0f);
+                project = WarningUI.GetComponent<Project>();
+                WarningUI.SetActive(true);
+                project.RebuildTransformList();
+
+                //イベント紐づけ
+                project["UpVerButton"].gameObject.GetComponent<Button>().onClick.AddListener(UpVerButton_OnClicked);
+                project["DownVerButton"].gameObject.GetComponent<Button>().onClick.AddListener(DownVerButton_OnClicked);
+
+                //UI表示時に音を鳴らす
+                ModAudioClip audioClip = ModResource.GetAudioClip("Warning");
+                AudioSource audio = WarningUI.AddComponent<AudioSource>();
+                audio.clip = audioClip;
+                audio.Play();
+            }
+        }
+
+        private void UpVerButton_OnClicked()
+        {
+            DestroyUI();
+            isValueChangedBlocked = true;
+            VersionMenu.Value = 1;
+            SetVersion(1);
+            UpdateDoNotShowWarning();
+        }
+
+        private void DownVerButton_OnClicked()
+        {
+            DestroyUI();
+            isValueChangedBlocked = true;
+            VersionMenu.Value = 0;
+            SetVersion(0);
+            UpdateDoNotShowWarning();
+        }
+
+        private void UpdateDoNotShowWarning()
+        {
+            Mod.doNotShowWarning = project["HideWarningToggleButton"].GetComponent<Toggle>().isOn;
+        }
 
         /// <summary>
         /// バージョン変更メニューのハンドラー
@@ -170,14 +236,41 @@ namespace BlockVersionChanger
         /// <param name="value">入力値</param>
         private void VersionMenu_ValueChanged(int value)
         {
-            if(blockType == BlockType.StartingBlock)
-            {
-                VersionMenu.SetValue(GetVersion());
-                Debug.Log("[BlockVersionChanger] StartingBlockはバージョン変更不可能です。");
+            if (isValueChangedBlocked){
+                isValueChangedBlocked = false;
                 return;
             }
+            if(WarningUI){
+                isValueChangedBlocked = true;
+                VersionMenu.Value = GetVersion();
+            }
+            else
+            {
+                if (blockType == BlockType.StartingBlock)
+                {
+                    isValueChangedBlocked = true;
+                    VersionMenu.Value = GetVersion();
+                    Debug.Log("[BlockVersionChanger] StartingBlockはバージョン変更不可能です。");
+                    return;
+                }
+                if(value >= 1 || Mod.doNotShowWarning){
+                    SetVersion(value);
+                    return;
+                }
+                isValueChangedBlocked = true;
+                VersionMenu.Value = GetVersion();
+                SetupWarningUI();
+            }
+        }
 
-            SetVersion(value);
+        private void DestroyUI()
+        {
+            Destroy(WarningUI);
+        }
+
+        void OnDestroy()
+        {
+            DestroyUI();
         }
     }
 }

@@ -14,12 +14,13 @@
 	<MultiplayerCompatible>true</MultiplayerCompatible>
 
 	<Assemblies>
-	<Assembly path="BlockVersionChanger.dll" />
+		<Assembly path="BlockVersionChanger.dll" />
 	</Assemblies>
 
 	<Resources>
 	<Texture name="icon" path="icon.png" />
 	<Texture name="thumb" path="thumb.png" />
+	<AudioClip name="Warning" path="Warning.wav" />
 	</Resources>
 
 	<!-- This value is automatically generated. Do not change it or you may break machine&level save files. -->

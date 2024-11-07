@@ -13,6 +13,7 @@ namespace BlockVersionChanger
     {
         //Modで保持するオブジェクトとか
         public static GameObject ModController;
+        public static GameObject UIPrefab_WarningVersionDown; //バージョン変更警告UIの雛形
         //Modで保持する定数
         public static readonly string ModName = "BlockVersionChanger";
         public static class UIFactory
@@ -25,6 +26,15 @@ namespace BlockVersionChanger
         //パブリックなフラグとか変数とか
         public static bool isUIFactory = false;
         public static bool isEnglish = true;
+        private static bool _doNotShowWarning = false;
+        public static bool doNotShowWarning
+        {
+            get => _doNotShowWarning;
+            set
+            {
+                _doNotShowWarning = value;
+            }
+        }
 
 
         public override void OnLoad()
