@@ -39,7 +39,7 @@ namespace BlockVersionChanger
         void Update()
         {
             //シミュ開始した時、もしくはブロック設定UIが消えたときに、警告UIを消す
-            if (targetComponent.isSimulating || (WarningUI && !BlockMapperObj))
+            if ((targetComponent && targetComponent.isSimulating) || (WarningUI && !BlockMapperObj))
             {
                 DestroyUI();
             }
