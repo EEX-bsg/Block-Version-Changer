@@ -31,20 +31,23 @@ namespace BlockVersionChanger
 
         void Awake()
         {
-            //UIFactory Setup
-            Make.RegisterSerialisationProvider(Mod.ModName, new SerializationProvider
+            if(!Mod.NotNeedUIFactory)
             {
-                CreateText = c => Modding.ModIO.CreateText(c),
-                GetFiles = c => Modding.ModIO.GetFiles(c),
-                ReadAllText = c => Modding.ModIO.ReadAllText(c),
-                AllResourcesLoaded = () => ModResource.AllResourcesLoaded,
-                OnAllResourcesLoaded = e => ModResource.OnAllResourcesLoaded += e
-            });
+                //UIFactory Setup
+                Make.RegisterSerialisationProvider(Mod.ModName, new SerializationProvider
+                {
+                    CreateText = c => Modding.ModIO.CreateText(c),
+                    GetFiles = c => Modding.ModIO.GetFiles(c),
+                    ReadAllText = c => Modding.ModIO.ReadAllText(c),
+                    AllResourcesLoaded = () => ModResource.AllResourcesLoaded,
+                    OnAllResourcesLoaded = e => ModResource.OnAllResourcesLoaded += e
+                });
+
+                isEnglish = Mod.isEnglish;
+            }
 
             // events
             Events.OnBlockInit += OnBlockInit; //ブロック設置時にイベント発火
-
-            isEnglish = Mod.isEnglish;
         }
 
         /// <summary>
@@ -63,7 +66,7 @@ namespace BlockVersionChanger
             //UIFactoryのプロジェクトロード
             //別にOnBlockInitでやらなくても良いけど、案外どこでも大丈夫そう
             //OnSceneChangedが安牌ではある(公式推奨)
-            if (Mod.UIPrefab_WarningVersionDown == null)
+            if (!Mod.NotNeedUIFactory && Mod.UIPrefab_WarningVersionDown == null)
             {
                 //Make.OnReadyを使うと、UIFactoryがロード完了してる時に実行してくれるようになります。神
                 //ロードが間に合ってない場合は、ロード終わってから実行してくれる...はず

@@ -37,7 +37,7 @@ namespace BlockVersionChanger
             {
                 if(!initialised)
                 {
-                    //コンフィグファイルがあればその値、なければfalse(デフォ値)  --を省略した式
+                    //コンフィグファイルがあればその値、なければfalse(デフォ値)
                     _doNotShowWarning = Configuration.GetData().HasKey("HideDowngradeWarning") && Configuration.GetData().ReadBool("HideDowngradeWarning");
                     initialised = true;
                 }
@@ -46,10 +46,13 @@ namespace BlockVersionChanger
             set
             {
                 if(value.Equals(_doNotShowWarning)) return;
+                if(NotNeedUIFactory) return; //Modロード時にtrueならゲーム中は絶対に変えさせない
                 _doNotShowWarning = value;
                 Configuration.GetData().Write("HideDowngradeWarning", value);
             }
         }
+
+        public static bool NotNeedUIFactory {get; private set;}
 
 
         public override void OnLoad()
@@ -61,6 +64,9 @@ namespace BlockVersionChanger
             if(SingleInstance<LocalisationManager>.Instance.currLangName == "日本語"){
                 isEnglish = false;
             }
+
+            //最初っからコンフィグで非表示設定ならUIFactoryいらねえよなぁ!?
+            NotNeedUIFactory = DoNotShowWarning;
 
             //UIFactoryがあれば、Mod読み込み用クラスをロード(ModController.cs)
             //なければ前提Modが足りない事を伝える警告UIを表示
