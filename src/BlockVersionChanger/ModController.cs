@@ -69,16 +69,16 @@ namespace BlockVersionChanger
                 //ロードが間に合ってない場合は、ロード終わってから実行してくれる...はず
                 Make.OnReady(Mod.ModName, () =>
                 {
-                    Project project = Make.LoadProject(Mod.ModName, "WarningVersionDown");
-                    Mod.UIPrefab_WarningVersionDown = project.gameObject;
+                    GameObject projectObj = Make.LoadProject(Mod.ModName, "WarningVersionDown").gameObject;
+                    Mod.UIPrefab_WarningVersionDown = projectObj;
                     Mod.UIPrefab_WarningVersionDown.SetActive(false);//雛形なので非表示で保持
 
                     //ローカライズ
-                    project["Header_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "title_en" : "title_jp"];
-                    project["Contents_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "contents_en" : "contents_jp"];
-                    project["HideWarningToggle_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "hide-warning-toggle_en" : "hide-warning-toggle_jp"];
-                    project["UpVerButton_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "up-ver-button_en" : "up-ver-button_jp"];
-                    project["DownVerButton_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "down-ver-button_en" : "down-ver-button_jp"];
+                    projectObj.GetComponent<Project>()["Header_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "title_en" : "title_jp"];
+                    projectObj.GetComponent<Project>()["Contents_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "contents_en" : "contents_jp"];
+                    projectObj.GetComponent<Project>()["HideWarningToggle_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "hide-warning-toggle_en" : "hide-warning-toggle_jp"];
+                    projectObj.GetComponent<Project>()["UpVerButton_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "up-ver-button_en" : "up-ver-button_jp"];
+                    projectObj.GetComponent<Project>()["DownVerButton_Text"].gameObject.GetComponent<Text>().text = texts[isEnglish? "down-ver-button_en" : "down-ver-button_jp"];
                 });
             }
 

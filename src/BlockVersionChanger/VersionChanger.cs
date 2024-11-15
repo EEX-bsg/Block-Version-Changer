@@ -20,7 +20,6 @@ namespace BlockVersionChanger
         private GameObject BlockMapperObj;//このブロックの設定UI (設定閉じたの検知してUI消す用)
         private BlockBehaviour targetComponent = null; //versionの入っているコンポーネント
         private BlockType blockType; //ブロックの名前
-        private Project project;
 
         //flag
         private bool isValueChangedBlocked = false; //一時的にversion値が変わってもその先の処理をスキップさせる
@@ -193,13 +192,12 @@ namespace BlockVersionChanger
                 WarningUI.name = "WarningVersionDown - " + blockType.ToString();
                 WarningUI.transform.SetParent(HierarchyUtils.FindObject("Canvas"));//ここかUIFactory以外だと動かない(canvasが無い)
                 WarningUI.transform.localPosition = new Vector3(0f, 0f, 0f);
-                project = WarningUI.GetComponent<Project>();
                 WarningUI.SetActive(true);
-                project.RebuildTransformList();//お ま じ な い
+                WarningUI.GetComponent<Project>().RebuildTransformList();//お ま じ な い
 
                 //イベント紐づけ
-                project["UpVerButton"].gameObject.GetComponent<Button>().onClick.AddListener(UpVerButton_OnClicked);
-                project["DownVerButton"].gameObject.GetComponent<Button>().onClick.AddListener(DownVerButton_OnClicked);
+                WarningUI.GetComponent<Project>()["UpVerButton"].gameObject.GetComponent<Button>().onClick.AddListener(UpVerButton_OnClicked);
+                WarningUI.GetComponent<Project>()["DownVerButton"].gameObject.GetComponent<Button>().onClick.AddListener(DownVerButton_OnClicked);
 
                 //UI表示時に音を鳴らす
                 ModAudioClip audioClip = ModResource.GetAudioClip("Warning");
@@ -238,7 +236,7 @@ namespace BlockVersionChanger
         /// </summary>
         private void UpdateDoNotShowWarning()
         {
-            Mod.DoNotShowWarning = project["HideWarningToggleButton"].GetComponent<Toggle>().isOn;
+            Mod.DoNotShowWarning = WarningUI.GetComponent<Project>()["HideWarningToggleButton"].GetComponent<Toggle>().isOn;
         }
 
         /// <summary>
