@@ -96,9 +96,11 @@ namespace BlockVersionChanger
                     break;
                 case BlockType.Wheel:
                 case BlockType.LargeWheel:
-                case BlockType.CogMediumPowered:
                     targetComponent = block.GameObject.GetComponent<CogMotorControllerHinge>();
                     hasAltCollider = true;
+                    break;
+                case BlockType.CogMediumPowered:
+                    targetComponent = block.GameObject.GetComponent<CogMotorControllerHinge>();
                     break;
                 case BlockType.WheelUnpowered:
                 case BlockType.LargeWheelUnpowered:
