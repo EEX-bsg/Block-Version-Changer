@@ -100,6 +100,9 @@ namespace BlockVersionChanger
                     hasAltCollider = true;
                     break;
                 case BlockType.CogMediumPowered:
+                case BlockType.Drill:
+                case BlockType.CircularSaw:
+                case BlockType.SpinningBlock:
                     targetComponent = block.GameObject.GetComponent<CogMotorControllerHinge>();
                     break;
                 case BlockType.WheelUnpowered:

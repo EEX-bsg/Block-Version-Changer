@@ -73,6 +73,9 @@ namespace BlockVersionChanger
                 case BlockType.Wheel:
                 case BlockType.LargeWheel:
                 case BlockType.CogMediumPowered:
+                case BlockType.Drill:
+                case BlockType.CircularSaw:
+                case BlockType.SpinningBlock:
                     return ((CogMotorControllerHinge)targetComponent).version;
                 case BlockType.BuildSurface:
                     return ((BuildSurface)targetComponent).version;
@@ -127,6 +130,9 @@ namespace BlockVersionChanger
                 case BlockType.Wheel:
                 case BlockType.LargeWheel:
                 case BlockType.CogMediumPowered:
+                case BlockType.Drill:
+                case BlockType.CircularSaw:
+                case BlockType.SpinningBlock:
                     ((CogMotorControllerHinge)targetComponent).version = newVersion;
                     break;
                 case BlockType.BuildSurface:
